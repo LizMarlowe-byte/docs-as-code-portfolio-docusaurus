@@ -520,7 +520,7 @@ Use the Spotify Desktop App to get the **Spotify ID**:
 
 ### Step 2: Start the API request with the **Get Artist** endpoint
 
-Append the Spotify ID to the **Get Artist** endpoint (**https://api.spotify.com/v1/artists/{artist_id}**).
+Append the Spotify ID to the **Get Artist** endpoint (**https://api.spotify.com/v1/artists/`{artist_id}`**).
 
 For example:
 
@@ -637,7 +637,7 @@ GET
 
 #### Endpoint
 
-https://api.spotify.com/v1/albums/{id}
+https://api.spotify.com/v1/albums/`{id}`
 
 #### Request syntax
 
@@ -804,11 +804,11 @@ curl --request GET \
 |`artists.type`| Object type. | string | Valid values: **artist** |
 |`artists.uri`| Spotify URI for the artist. | string |            |
 |`tracks`| Tracks of the album. | object |    |
-|`tracks.href`| Link to the Web API endpoint, returning the full result of the request. | string | Example:  **https://api.spotify.com/v1/albums/{album_id}/tracks?offset=0&limit=20**|
+|`tracks.href`| Link to the Web API endpoint, returning the full result of the request. | string | Example:  **https://api.spotify.com/v1/albums/`{album_id}`/tracks?offset=0&limit=20**|
 |`tracks.limit`| Maximum number of items in the response (as set in the query or by default).| integer | Example: **20**|
-|`tracks.next`| URL of the next page of items. | string | Example: **https://api.spotify.com/v1/albums/{album_id}/tracks?offset=20&limit=20**|
+|`tracks.next`| URL of the next page of items. | string | Example: **https://api.spotify.com/v1/albums/`{album_id}`/tracks?offset=20&limit=20**|
 |`tracks.offset`| Offset of the items returned (as set in the query or by default).| integer | Example: **0**|
-|`tracks.previous`| URL of the previous page of items. | string | Example: **https://api.spotify.com/v1/albums/{album_id}/tracks?offset=0&limit=20**|
+|`tracks.previous`| URL of the previous page of items. | string | Example: **https://api.spotify.com/v1/albums/`{album_id}`/tracks?offset=0&limit=20**|
 |`tracks.total`| Total number of items available to return. | integer | Example: **4**|
 |`copyrights`| Copyright statements of the album. |array of copyright objects |   |
 |`copyrights.text`| Copyright text for this content. | string |     |
@@ -1043,7 +1043,7 @@ GET
 
 #### Endpoint
 
-https://api.spotify.com/v1/artists/{id}/top-tracks
+https://api.spotify.com/v1/artists/`{id}`/top-tracks
 
 #### Request syntax
 
@@ -1372,7 +1372,7 @@ GET
 
 #### Endpoint
 
- https://api.spotify.com/v1/playlists/{playlist_id}
+ https://api.spotify.com/v1/playlists/`{playlist_id}`
 
 #### Request syntax
 
@@ -1582,7 +1582,7 @@ PUT
 
 #### Endpoint
 
-https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+https://api.spotify.com/v1/playlists/`{playlist_id}`/tracks
 
 #### Request syntax
 
@@ -1660,7 +1660,7 @@ POST
 
 #### Endpoint
 
-https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+https://api.spotify.com/v1/playlists/`{playlist_id}`/tracks
 
 #### Request syntax
 
@@ -1739,7 +1739,7 @@ DELETE
 
 #### Endpoint
 
-https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+https://api.spotify.com/v1/playlists/`{playlist_id}`/tracks
 
 #### Request syntax
 

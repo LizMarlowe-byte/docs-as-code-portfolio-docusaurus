@@ -1399,7 +1399,7 @@ GET (see [HTTP methods in OpenWeatherMap](#http-methods-in-openweathermap)).
 
 #### Endpoint
 
-https://bulk.openweathermap.org/snapshot/{BULK_FILE_NAME}
+https://bulk.openweathermap.org/snapshot/`{BULK_FILE_NAME}`
 
 #### Request syntax
 
@@ -1434,7 +1434,7 @@ https://bulk.openweathermap.org/snapshot/{BULK_FILE_NAME}?appid={API key}
 
 ```
 
-where **{BULK_FILE_NAME}** is one of the following five files that contains current weather data:
+where **`{BULK_FILE_NAME}`** is one of the following five files that contains current weather data:
 
 |Seq.|Filename       |Number of Locations      |Updated by UTC Time|Notes
 |:---|:--------------|:------------------------|:------------------|-----------------|
@@ -1461,7 +1461,7 @@ GET (see [HTTP methods in OpenWeatherMap](#http-methods-in-openweathermap)).
 
 #### Endpoint
 
-https://bulk.openweathermap.org/snapshot/{BULK_FILE_NAME}
+https://bulk.openweathermap.org/snapshot/`{BULK_FILE_NAME}`
 
 #### Request syntax
 
@@ -1496,7 +1496,7 @@ https://bulk.openweathermap.org/snapshot/{BULK_FILE_NAME}?appid={API key}
 
 ```
 
-where **{BULK_FILE_NAME}** is one of the following five files that contains forecasted weather data:
+where **`{BULK_FILE_NAME}`** is one of the following five files that contains forecasted weather data:
 
 |Seq.|Filename       |Number of Locations      |Updated by UTC Time|Notes
 |:---|:--------------|:------------------------|:------------------|-----------------|
@@ -1523,7 +1523,7 @@ GET (see [HTTP methods in OpenWeatherMap](#http-methods-in-openweathermap)).
 
 #### Endpoint
 
-https://bulk.openweathermap.org/archive/{BULK_FILE_NAME}
+https://bulk.openweathermap.org/archive/`{BULK_FILE_NAME}`
 
 #### Request syntax
 
@@ -1558,7 +1558,7 @@ https://bulk.openweathermap.org/archive/{BULK_FILE_NAME}?appid={API key}
 
 ```
 
-where **{BULK_FILE_NAME}** is one of the files that contains a [7-day archive](https://openweathermap.org/bulk#bulk_archive) of current and forecast weather data.
+where **`{BULK_FILE_NAME}`** is one of the files that contains a [7-day archive](https://openweathermap.org/bulk#bulk_archive) of current and forecast weather data.
 
 
 2. Unpack the downloaded file by using any suitable archiver software. You will then have a JSON or CSV formatted file that is ready to use.
