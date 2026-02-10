@@ -17,15 +17,15 @@ This guide is intended for technical writers, content developers, and documentat
 
 In a relationship table:
 
-- Each _row_ in the table encapsulates a specific _subject_. <br>For example, your relationship table includes the content in a specific user guide. One row in the table includes content in the chapter, _Getting Started_.
+- Each _row_ in the table encapsulates a specific _subject_. <br />For example, your relationship table includes the content in a specific user guide. One row in the table includes content in the chapter, _Getting Started_.
 
-- Topics related to the subject of the row are included in one of three columns, according to the topic type: _concept_, _task_, or _reference_. <br>For example, you have two concept topics called _Workforce Optimization overview_ and _Navigating WFO workspaces_, two task topics called _Sign in to the portal_ and _Sign out of the portal_, and one reference topic called _Quick access icons_.
+- Topics related to the subject of the row are included in one of three columns, according to the topic type: _concept_, _task_, or _reference_. <br />For example, you have two concept topics called _Workforce Optimization overview_ and _Navigating WFO workspaces_, two task topics called _Sign in to the portal_ and _Sign out of the portal_, and one reference topic called _Quick access icons_.
 
-- By default, _different_ topic types in the same row automatically link to one another in your output. <br>For example, by default, the _Workforce Optimization overview_ topic, the _Sign in to the portal_ topic, and the _Quick access icons_ topics all link to each other.
+- By default, _different_ topic types in the same row automatically link to one another in your output. <br />For example, by default, the _Workforce Optimization overview_ topic, the _Sign in to the portal_ topic, and the _Quick access icons_ topics all link to each other.
 
-- By default, the _same_ topic types in the same row do _not_ link to each other in your output. <br>For example, by default, the two task topics, _Sign in to the portal_ and _Sign out of the portal_, do _not_ link to each other.
+- By default, the _same_ topic types in the same row do _not_ link to each other in your output. <br />For example, by default, the two task topics, _Sign in to the portal_ and _Sign out of the portal_, do _not_ link to each other.
 
-- To link the _same_ topic types in the same row to each other, you need to define those topics as a **Family**. Once you do that, topics in the same **Family** link to each other in your output. <br>For example, define the task topics, _Sign in to the portal_ and _Sign out of the portal_, as a **Family**. As a result, they link to each other in the output.
+- To link the _same_ topic types in the same row to each other, you need to define those topics as a **Family**. Once you do that, topics in the same **Family** link to each other in your output. <br />For example, define the task topics, _Sign in to the portal_ and _Sign out of the portal_, as a **Family**. As a result, they link to each other in the output.
 
 This example shows a relationship table for a _Getting Started_ chapter, with concept, task, and reference topics grouped in one row. The accompanying table explains the function of each numbered element.
 
@@ -148,7 +148,7 @@ Create the first row in your relationship table.
 
 ---
 
-2. In the **Row Type** field, enter the name of the row (or subject), and click **OK**. <br>For example, I want to put links to topics related to getting up and running in an application called Workforce Optimization. Therefore, the name of my row is **Getting Started**.
+2. In the **Row Type** field, enter the name of the row (or subject), and click **OK**. <br />For example, I want to put links to topics related to getting up and running in an application called Workforce Optimization. Therefore, the name of my row is **Getting Started**.
 
 ---
 
@@ -246,7 +246,7 @@ Add all relevant topics to your relationship table. In addition, add your relati
 
 > **Note:** If you have existing **Related topic** elements and links where you are inserting the snippets, remove those elements so they do _not_ appear in the output.
 
-3. For every target file, from the **Relationship Table** tab, select the relationship table you created. <br>This ensures the relationship table links get included in the output.
+3. For every target file, from the **Relationship Table** tab, select the relationship table you created. <br />This ensures the relationship table links get included in the output.
 
 ---
 

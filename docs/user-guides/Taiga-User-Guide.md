@@ -149,8 +149,8 @@ You can create a Scrum or Kanban project. You can also copy an existing project 
 
 |Project Type |Description|
 |:-----------------|:-----------------------|
-|Scrum             |Create a Scrum project, which is an iterative and incremental Agile software development methodology for managing product development. <br>Scrum allows you to prioritize and solve your tasks in short time cycles. All work is managed in the product backlog, which contains tasks that are prioritized according to when the work needs to be delivered. <br>Product backlogs are broken down into manageable, specific periods of time called sprints. Each sprint contains specific user stories from the backlog that need to be delivered by the end of that sprint. The project advances as the backlog becomes depleted.    |
-|Kanban            |Create a Kanban project, which is a workflow-based Agile software development methodology for managing product development. <br>Kanban allows you to divide project development into stages. Work is managed on Kanban cards, like index cards or post-it notes, where each card details every task or user story that needs to be completed. The Kanban board is used to track progress by moving each card from one stage to the next.
+|Scrum             |Create a Scrum project, which is an iterative and incremental Agile software development methodology for managing product development. Scrum allows you to prioritize and solve your tasks in short time cycles. All work is managed in the product backlog, which contains tasks that are prioritized according to when the work needs to be delivered. Product backlogs are broken down into manageable, specific periods of time called sprints. Each sprint contains specific user stories from the backlog that need to be delivered by the end of that sprint. The project advances as the backlog becomes depleted.    |
+|Kanban            |Create a Kanban project, which is a workflow-based Agile software development methodology for managing product development. Kanban allows you to divide project development into stages. Work is managed on Kanban cards, like index cards or post-it notes, where each card details every task or user story that needs to be completed. The Kanban board is used to track progress by moving each card from one stage to the next.
 |Duplicate Project |Copy an existing project and modify as required.
 |Import Project    |Import a project from Taiga or other platforms (including Jira, Github, Trello, or Asana).
 
@@ -168,12 +168,12 @@ You can create a Scrum or Kanban project. You can also copy an existing project 
 |:-----------------|:-----------------------|
 |Project Name      |Enter a unique name for your project.|
 |Project Description |Enter a description for your project, which can include the type of entities the project will include (epics, stories, tasks, etc.) the target software release, and even details about the team members.
-|Public Project / Private Project |Select whether the project is open to all users (**Public**) or just the project's team members (**Private**). <br>The number of public projects you can create is determined by your [Taiga subscription plan](#taiga-deployment-options). For more information, see [What's the difference between public and private projects?](https://community.taiga.io/t/whats-the-difference-between-public-and-private-projects/139)
+|Public Project / Private Project |Select whether the project is open to all users (**Public**) or just the project's team members (**Private**). The number of public projects you can create is determined by your [Taiga subscription plan](#taiga-deployment-options). For more information, see [What's the difference between public and private projects?](https://community.taiga.io/t/whats-the-difference-between-public-and-private-projects/139)
 
 
 4. Select **Create Project**.
 
-   The system creates the new project. From here, you can start populating your project with stories, tasks, and issues. <br>For example, if you selected a Scrum project, you can start creating user stories for your product backlog (see [Create a user story](#create-a-user-story)).
+   The system creates the new project. From here, you can start populating your project with stories, tasks, and issues. For example, if you selected a Scrum project, you can start creating user stories for your product backlog (see [Create a user story](#create-a-user-story).
 
 ---
 
@@ -335,9 +335,9 @@ Role permissions help control who can create, edit, or delete Agile entities, su
 
 |Field |Description|
 |:-----------------|:-----------------------|
-|This role is part of the roles involved in estimating user story points.|Do one of the following:<ul><li> To allow the role to be involved in estimating user story points, toggle this setting to the **On** position.</li><li>If you do _not_ want the role to be involved in estimating user story points, toggle this setting to the **Off** position. |
-|Agile entities (**Epics**, **Sprints**, **User Stories**, **Tasks**, etc.)|To update the permissions for this role for a specific entity, select the entity. <br>For example, select **User Stories**.|
-|Permissions                  |Enable or disable the relevant permissions by toggling the settings to the **On** or **Off** positions. <br>For example, for the **Back** role, toggle the setting, **Delete user stories**, to the **Off** position. As a result, the member assigned to the **Back** role will not be able to delete user stories in the project.|
+|This role is part of the roles involved in estimating user story points.|Do one of the following:<ul><li>To allow the role to be involved in estimating user story points, toggle this setting to the **On** position.</li><li>If you do _not_ want the role to be involved in estimating user story points, toggle this setting to the **Off** position.</li></ul> |
+|Agile entities (**Epics**, **Sprints**, **User Stories**, **Tasks**, etc.)|To update the permissions for this role for a specific entity, select the entity. For example, select **User Stories**.|
+|Permissions                  |Enable or disable the relevant permissions by toggling the settings to the **On** or **Off** positions. For example, for the **Back** role, toggle the setting, **Delete user stories**, to the **Off** position. As a result, the member assigned to the **Back** role will not be able to delete user stories in the project.|
 
 6. To set specific permissions for any user, including search engines, select the **External User** role and update permissions accordingly.
 
@@ -372,9 +372,9 @@ When creating a new Agile entity in Taiga (such as an epic, user story, or task)
 
 |Field |Description|
 |:-----------------|:-----------------------|
-|Name              |Enter the name of the custom field. <br>For example, if you are adding a field for acceptance criteria for user stories, enter: **Acceptance Criteria**|
-|Description       |Enter a description for the custom field. <br>For example, for **Acceptance Criteria**: _Set of clear, measurable conditions that a user story must satisfy to be considered complete and accepted by the product owner or stakeholders._ |
-|Type              |Select the valid input type for the field. <br>Valid values include: **Text**, **Multi-line**, **Rich text**, **Date**, **URL**, **Dropdown**, **Checkbox**, **Number**.|
+|Name              |Enter the name of the custom field. For example, if you are adding a field for acceptance criteria for user stories, enter: **Acceptance Criteria**|
+|Description       |Enter a description for the custom field. For example, for **Acceptance Criteria**: _Set of clear, measurable conditions that a user story must satisfy to be considered complete and accepted by the product owner or stakeholders._ |
+|Type              |Select the valid input type for the field. Valid values include: **Text**, **Multi-line**, **Rich text**, **Date**, **URL**, **Dropdown**, **Checkbox**, **Number**.|
 
 5. To save your changes, hover over the row and select **Update custom field**.
 
@@ -488,9 +488,9 @@ Review the [Scrum project workflow](#scrum-project-workflow)
 
 |Field             |Description|
 |:-----------------|:-----------------------|
-|Color ID          |Select a color that identifies the epic. <br>Alternatively, enter the hexadecimal color code.
-|Epic Name      |Enter a unique name for your epic. <br>For example: _User Management Accessibility Redesign_|
-|Epic Description |Enter a description for your epic, which should describe the type of product development for the epic. <br>For example: _Improve accessibility features in the User Management module to comply with WCAG 2.1 standards._
+|Color ID          |Select a color that identifies the epic. Alternatively, enter the hexadecimal color code.
+|Epic Name      |Enter a unique name for your epic. For example: _User Management Accessibility Redesign_|
+|Epic Description |Enter a description for your epic, which should describe the type of product development for the epic. For example: _Improve accessibility features in the User Management module to comply with WCAG 2.1 standards._
 |Attachments |If desired, upload or drop any relevant attachments, such as feature specs, customer requirements, etc.|
 |Team requirement / Client requirement / Blocked| Select one of the following:<ul><li>**Team requirement**: Work defined by user stories in the epic is work the development team feels is necessary but it is not a direct client request.</li><li>**Client requirement**: Work defined by user stories in the epic is the result of a direct client request. .</li><li>**Blocked**: Work defined by the user stories in this epic currently _cannot_ be done, due to an external dependency or issue preventing its progress.</li></ul>
 
@@ -507,11 +507,11 @@ Review the [Scrum project workflow](#scrum-project-workflow)
 |Field             |Description|
 |:-----------------|:-----------------------|
 |Name          |Name of the epic.
-|Project       |Project associated with the epic. <br>A blank value indicates that the project is the one in which the epic was created (the current project). If the epic was assigned to a project other than the one in which it was created, the name of the project is displayed in this field. |
-|Sprint       |Sprint to which the epic is assigned. <br>**Note**: This field is often blank because epics span multiple sprints. They are _not_ single-sprint items. Instead, epics are linked to their specific user stories or tasks, which get assigned to sprints.|
-|Assigned     |Member of the project to which the epic is assigned. <br>By default, this field is blank. Typically, this is assigned to the specific team member who is responsible for the high-level goal or initiative of the epic.|
-|Status       |Status of the epic. <br>By default, a new epic is set to **New**. Can be set to **New**, **Ready**, **In Progress**, **Ready for Test**, and **Done**.|
-|Progress |Calculated rollup that reflects the completion status of all associated user stories (or Kanban cards) linked to the epic. <br>This is _not_ a manually editable field.
+|Project       |Project associated with the epic. A blank value indicates that the project is the one in which the epic was created (the current project). If the epic was assigned to a project other than the one in which it was created, the name of the project is displayed in this field. |
+|Sprint       |Sprint to which the epic is assigned. **Note**: This field is often blank because epics span multiple sprints. They are _not_ single-sprint items. Instead, epics are linked to their specific user stories or tasks, which get assigned to sprints.|
+|Assigned     |Member of the project to which the epic is assigned. By default, this field is blank. Typically, this is assigned to the specific team member who is responsible for the high-level goal or initiative of the epic.|
+|Status       |Status of the epic. By default, a new epic is set to **New**. Can be set to **New**, **Ready**, **In Progress**, **Ready for Test**, and **Done**.|
+|Progress |Calculated rollup that reflects the completion status of all associated user stories (or Kanban cards) linked to the epic. This is _not_ a manually editable field.
 
 **What to do next?**
 
@@ -575,10 +575,10 @@ For example, in the epic called _User Management Accessibility Redesign_, create
 
 |Field             |Description|
 |:-----------------|:-----------------------|
-|Description       |Enter a description for the story, and select **Save**. <br>To write the description, use the Connextra template: "As a {user role}, I want to {achieve a goal/action} so that {I get a value or benefit}. For example: _As a user with visual impairments, I want clear and descriptive UI labels so that screen readers can interpret them correctly._|
-|Attachments       |Upload any relevant files. <br>For example, this can include product specs, feature descriptions, etc.|
-|Comments          |Enter any relevant comments about the story. <br>For example, this can include URLs, information about dependencies, potential issues, etc.|
-|Points            |Enter the relevant story points for the relevant development areas. <br>For example, for a UI update, enter points for **UX**, **Design**, and **Front**.|
+|Description       |Enter a description for the story, and select **Save**. To write the description, use the Connextra template: "As a user, I want to achieve a goal/action so that I get a value or benefit. For example: _As a user with visual impairments, I want clear and descriptive UI labels so that screen readers can interpret them correctly._|
+|Attachments       |Upload any relevant files. For example, this can include product specs, feature descriptions, etc.|
+|Comments          |Enter any relevant comments about the story. For example, this can include URLs, information about dependencies, potential issues, etc.|
+|Points            |Enter the relevant story points for the relevant development areas. For example, for a UI update, enter points for **UX**, **Design**, and **Front**.|
 |Assigned          |Select **+ Add assigned** and select a member from the list. To assign the story to yourself, select **Assign to me**.|
 |Watchers          |Select **+ Add watchers** and select the members you want to _watch_ the story. These members will receive email notifications when there are story updates, and when the story's status changes.|
 
@@ -767,7 +767,7 @@ During the daily standups, discuss any blockers, issues, and dependencies, and t
 
 --- 
 
-> 💡 **Tip:** Alternatively, from the left sidebar, select **Scrum > {Sprint Name}**. For example, select **Scrum > DataLogix-S1**.
+> 💡 **Tip:** Alternatively, from the left sidebar, select **Scrum > `{Sprint Name}`**. For example, select **Scrum > DataLogix-S1**.
 
 2. View the Sprint Taskboard.
 
@@ -780,12 +780,12 @@ During the daily standups, discuss any blockers, issues, and dependencies, and t
 |Seq. # |Description                                    |
 |:------|:----------------------------------------------|
 |1      |Sprint name and time frame.                    |
-|2      |Sprint status summary, including the number of total story points, completed story points, open tasks, closed tasks, and iocaine doses. <br>Iocaine doses are a Taiga-specific, playful gamification signal (a _Princess Bride_ reference) that a teammate is taking on a difficult or outside-their-comfort-zone task, and may need extra support or time. See **Iocaine Drinker** in [Manage the team board](#manage-the-team-board). |
+|2      |Sprint status summary, including the number of total story points, completed story points, open tasks, closed tasks, and iocaine doses. Iocaine doses are a Taiga-specific, playful gamification signal (a _Princess Bride_ reference) that a teammate is taking on a difficult or outside-their-comfort-zone task, and may need extra support or time. See **Iocaine Drinker** in [Manage the team board](#manage-the-team-board). |
 |3      |Burndown chart (when selected), which shows the sprint's approximate or projected progress based on estimated closed tasks. |
 |4      |Zoom functionality, providing expanded and compact views of the board.                                                                    |
 |5      |Filter data (user stories and tasks) by keywords.                                                                                        |
 |6      |Assigned user stories in the sprint.|
-|7      |Status swim lanes, indicating the status of each task. <br>Drag and drop tasks to the relevant status lane. When all tasks are in the **Closed** lane, the story is closed.|
+|7      |Status swim lanes, indicating the status of each task. Drag and drop tasks to the relevant status lane. When all tasks are in the **Closed** lane, the story is closed.|
 
 3. To display the burndown chart, select the **Show statistics** icon.
 
@@ -850,7 +850,7 @@ Kanban is a high-level workflow-based Agile software development methodology for
 
 2. On the project page, from the left sidebar, select **Kanban**.
 
-3. To create a new user story for your Kanban project, from any status swim lane, select the **+** icon. <br>For example, to create a new user story called **Enhance Search**, select the **+** icon from the **New** swim lane.
+3. To create a new user story for your Kanban project, from any status swim lane, select the **+** icon. For example, to create a new user story called **Enhance Search**, select the **+** icon from the **New** swim lane.
 
 4. On the **New user story** screen, complete the fields.
 
@@ -866,7 +866,7 @@ Kanban is a high-level workflow-based Agile software development methodology for
 |Description|Enter the details about the story.        |
 |Attachments|Drop any relevant attachments (such as a feature description or development spec).|
 |Assign     |To assign the story to a member, select **Assign**, select the member you want. To assign the story to yourself, select **Assign to me**.|
-|Points     |Select the area of development you want and enter the number of story points for that area. <br>For example, for a UI story, enter points for **UX** and **Design**. 
+|Points     |Select the area of development you want and enter the number of story points for that area. For example, for a UI story, enter points for **UX** and **Design**. 
 
 5. Select **Create**.
 
@@ -922,7 +922,7 @@ Every project encounters issues, which may include bugs, questions, dependencies
 |Description |Enter the details about the issue.        |
 |Attachments |Drop any relevant attachments (such as a Figma screenshot).|
 |Assign or Assign to me |To assign the issue to a member, select **Assign** and select the member you want. To assign the issue to yourself, select **Assign to me**.|
-|Type            |Select one of the following: <ul><li>**Bug**</li><li>**Question**</li><li>**Enhancement**</li>|
+|Type            |Select one of the following: <ul><li>**Bug**</li><li>**Question**</li><li>**Enhancement**</li></ul>|
 |Severity        |Select one of the following: <ul><li>**Wishlist**</li><li>**Minor**</li><li>**Normal**</li><li>**Important**</li><li>**Critical**</li></ul>|
 |Priority        |Select one of the following: <ul><li>**Low**</li><li>**Normal**</li><li>**High**</li></ul>|
 
@@ -986,13 +986,13 @@ The following table describes the titles on the team board, which highlight team
 |Title |Description                                    |
 |:------------|:----------------------------------------------|
 |Mr. Wolf     |Member who has closed many issues.                   |
-|Iocaine Drinker|Member who has ingested many iocaine doses. <br>A fictional reference to _The Princess Bride_, a member who has ingested many iocaine doses in Taiga indicates that they have tackled difficult or outside-their-comfort-zone tasks. A user can mark an iocaine dose to indicate they’re tackling a difficult or outside‑their‑comfort‑zone task. (Also referenced on the Sprint Taskboard.)|
+|Iocaine Drinker|Member who has ingested many iocaine doses. A fictional reference to _The Princess Bride_, a member who has ingested many iocaine doses in Taiga indicates that they have tackled difficult or outside-their-comfort-zone tasks. A user can mark an iocaine dose to indicate they’re tackling a difficult or outside‑their‑comfort‑zone task. (Also referenced on the Sprint Taskboard.)|
 |Cervantes    |Member who has edited many wiki pages.|
 |Bug Hunter   |Member who has reported many issues.    |
 |Night Shift |Member who has closed many tasks.      |
 |Total Power |Total number of points, or accomplishments, that the member has achieved.|
 
-3. To filter the team members by role, from **Filters**, select the role you want. <br>For example, to view all UX team members, select **UX**.
+3. To filter the team members by role, from **Filters**, select the role you want. For example, to view all UX team members, select **UX**.
 
 ---
 

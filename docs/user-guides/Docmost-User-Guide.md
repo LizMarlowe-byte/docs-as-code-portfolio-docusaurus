@@ -387,9 +387,9 @@ Within your workspace, create a new space to group together documents, permissio
 
 |Field          |Description|
 |:--------------|:----------| 
-|Space name     |Enter the name of the space. <br>For example: **Human Resources**.|
-|Space slug     |Enter the slug for the space, which identifies the page in a unique, user-friendly way. <br>For example: **HR**.|
-|Space description |Enter the purpose of the space. <br>For example: **Includes pages related to annual goals, projections, new hiring requirements, and meeting minutes.**|
+|Space name     |Enter the name of the space. For example: **Human Resources**.|
+|Space slug     |Enter the slug for the space, which identifies the page in a unique, user-friendly way. For example: **HR**.|
+|Space description |Enter the purpose of the space. For example: **Includes pages related to annual goals, projections, new hiring requirements, and meeting minutes.**|
 
 5. Select **Create**.
 
@@ -634,9 +634,9 @@ Create a group to manage user permissions for multiple users simultaneously.
 
 |Field          |Description|
 |:--------------|:----------| 
-|Group name     |Enter the name of the group. <br>For example: **Core Engineering Team**.|
-|Group description| Enter a description for the group. <br>For example: **Developers working on the core features for the NovaBuild release.**|
-|Add group members|Search for and enter the members you want to add to the group. <br>You can also add members at a later time.|
+|Group name     |Enter the name of the group. For example: **Core Engineering Team**.|
+|Group description| Enter a description for the group. For example: **Developers working on the core features for the NovaBuild release.**|
+|Add group members|Search for and enter the members you want to add to the group. You can also add members at a later time.|
 
 5. Select **Create**.
 
@@ -935,7 +935,7 @@ You can duplicate a page to the same space. This is helpful if you want to creat
 
 ---
 
-   The system duplicates the page in the same space, naming it: **Copy of {page name}**. For example, if you duplicated a page called **Annual Goals**, the duplicated page is named: **Copy of Annual Goals**.
+   The system duplicates the page in the same space, naming it: **Copy of `{page name}`**. For example, if you duplicated a page called **Annual Goals**, the duplicated page is named: **Copy of Annual Goals**.
 
 ---
 

@@ -1,0 +1,8 @@
+{
+  "label": "How To Articles",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "This how‑to article provides create clear, task‑based instructions that guide users through completing a specific workflow."
+  }
+}

@@ -74,7 +74,7 @@ The following diagram illustrates this data flow, and the accompanying table des
 
 |Step|Source        |Destination|Description|
 |:---|:-------------|:----------|:----------
-|1   |Push Topics, Change Data Capture, and User Data|CloudSync CRM Adapter|CloudSync CRM pushes new events (Push Topics, Change Data Capture, and User Data) to the CloudSync CRM Adapter in the Optiflow system. <br>The CloudSync CRM Adapter in Optiflow Cloud receives these events and checks to make sure all statuses, groups, and user IDs are recognized. If any IDs are _not_ mapped, the adapter calls the required REST API to retrieve the correct mappings.|
+|1   |Push Topics, Change Data Capture, and User Data|CloudSync CRM Adapter|CloudSync CRM pushes new events (Push Topics, Change Data Capture, and User Data) to the CloudSync CRM Adapter in the Optiflow system. The CloudSync CRM Adapter in Optiflow Cloud receives these events and checks to make sure all statuses, groups, and user IDs are recognized. If any IDs are _not_ mapped, the adapter calls the required REST API to retrieve the correct mappings.|
 |2   |CloudSync CRM Adapter|Data Processor|The CloudSync CRM Adapter in Optiflow Cloud gathers events for the historical data and posts the data to the Data Processor for aggregation.|
 |3   |CloudSync CRM Adapter|Live Session Monitoring (LSM) API|The CloudSync CRM Adapter posts real-time session monitoring directly to the Live Session Monitoring (LSM) API, as the data is received.|
 |4    |Data Processor|Support Ticket Trends (STT) API|The Data Processor aggregates ticket trends in 15-minute intervals, and posts to the Support Ticket Trends (STT) API.|
@@ -372,11 +372,11 @@ To validate that everything is configured correctly for the integration, use the
 
    - grant_type: **urn:ietf:params:oauth:grant-type:jwt-bearer**
 
-   - userID: **<Your username>**
+   - userID: **`<Your username>`**
 
-   - consumerKey: **<Your Consumer Key copied from the previous step>**
+   - consumerKey: **`<Your Consumer Key copied from the previous step>`**
 
-   - cloudsyncTokenEndpoint: **<Your CloudSync Token Endpoint>**
+   - cloudsyncTokenEndpoint: **`<Your CloudSync Token Endpoint>`**
 
 3. Select **Send**.
 

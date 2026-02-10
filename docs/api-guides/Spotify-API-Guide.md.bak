@@ -73,7 +73,7 @@ Spotify implements the [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) s
 
 |Seq.#  |Source  |Target     |Description|
 |:-------|:-------|:----------|-----------|
-|1       |User    |Client     |The Spotify user grants consent for requested scopes. Note: The client ID and client secret are obtained by the developer when creating the app, and _not_ provided by the user.|
+|1       |User    |Client     |The Spotify user grants consent for requested scopes. <br />Note: The client ID and client secret are obtained by the developer when creating the app, and _not_ provided by the user.|
 |2       |Client  |Spotify Server |To access the protected resources, the client first sends their credentials to the server.|
 |3       |Spotify Server| Client     |The Spotify Server authenticates the client, and sends the client an access token.|
 |4       |Client |Spotify Server| The client uses the access token to send a request to access specific resources on behalf of the user or application.|
@@ -330,7 +330,7 @@ curl "https://api.spotify.com/v1/me/playlists?offset=20&limit=20" \
 
 From the Spotify Developer Dashboard, set up your account. Then, create your first app, which provides you with a _client ID_ and _client secret_. Finally, request an _access token_, which is a string that contains the credentials and permissions you need to access a given resource. 
 
-Every access token is valid for 1 hour. Include the `Authorization` header in your API requests using: `Bearer (access token)`.
+Every access token is valid for 1 hour. Include the `Authorization` header in your API requests using: `Bearer `<access_token>`.
 
 ??? note "Topics"
 	* [Set up your account](#set-up-your-account)
@@ -394,7 +394,7 @@ An app provides the _client ID_ and _client secret_ you need to request an acces
 |App name       |Enter the name of the application.|
 |App description |Enter a description of the application.|
 |Website         |Optional_. Enter the Web domain or URL that allows users to get more information about your application.|
-|Redirect URIs   |Enter one or more URIs where users can be redirected after authentication success or failure, and select **Add**. These URIs enable the Spotify authentication service to automatically invoke your app every time the user logs in. For example: http://127.0.0.1:8080/. Note that on iOS apps, the redirect URI must adhere to the following:<ul><li>All of the characters are lowercase.</li><li>Prefix _must_ be unique to your application. (It cannot be a general prefix like http.) NOTE: The prefix must only be used by your application for authenticating Spotify. If you already have a URL scheme handled by your application for other uses, do _not_ reuse it.</li><li>Include a path after the first pair of forward slashes. For example, if your app name is _Get My Fav Music Stats_, a good candidate for the redirect URI could be: `get-my-fav-music-stats-login://callback`.</li></ul>|
+|Redirect URIs   |Enter one or more URIs where users can be redirected after authentication success or failure, and select **Add**. <br />These URIs enable the Spotify authentication service to automatically invoke your app every time the user logs in. For example: http://127.0.0.1:8080/. <br />Note that on iOS apps, the redirect URI must adhere to the following:`<ul>``<li>`All of the characters are lowercase.</li>`<li>`Prefix _must_ be unique to your application. (It cannot be a general prefix like http.) NOTE: The prefix must only be used by your application for authenticating Spotify. If you already have a URL scheme handled by your application for other uses, do _not_ reuse it.</li>`<li>`Include a path after the first pair of forward slashes. <br />For example, if your app name is _Get My Fav Music Stats_, a good candidate for the redirect URI could be: `get-my-fav-music-stats-login://callback`.</li></ul>|
 |Which API/SDKs are you planning to use?|Select the type of APIs/SDKs you are planning to use for the app.|
 |I understand and agree with Spotify's Developer Terms of Service and Design Guidelines. | Select the terms of service.
 
@@ -474,7 +474,7 @@ You can now request an _access token_, which is a string that contains the crede
 ```bash
 curl -X POST "https://accounts.spotify.com/api/token" \
      -H "Content-Type: application/x-www-form-urlencoded" \
-     -H "Authorization: Basic '<base64(client_id:client_secret)>'" \
+     -H "Authorization: Basic <base64(client_id:client_secret)>" \
      -d "grant_type=client_credentials"
 
 ```
@@ -490,7 +490,7 @@ The response returns an access token that is valid for 1 hour (or 3600 seconds).
 }
 
 ```
-To use the access token, you must include the `Authorization` header in your API requests, where the value is the valid access token following the format: `Bearer (access token)`.
+To use the access token, you must include the `Authorization` header in your API requests, where the value is the valid access token following the format: `Bearer <Access Token>`.
 
 ---
 
@@ -593,8 +593,8 @@ The following headers are commonly used:
 
 |Header Name    |Description|Required|Notes|
 |:--------------|:----------|:-------|:-----|
-|`Authorization`|Sends the access token to the API.|required |Value is: **`Bearer (access token)`** |
-|`Content-Type` |Media type of the request body.| conditional |Note: <ul><li>Use **application/json** for JSON request bodies (such as POST/PUT with a body).</li><li> Use **application/x-www-form-urlencoded** for token requests.</li><li>Omit when there is no body (such as a simple GET).</li></ul>|
+|`Authorization`|Sends the access token to the API.|required |Value is: **Bearer ``<access_token>``** |
+|`Content-Type` |Media type of the request body.| conditional |Note: `<ul>``<li>`Use **application/json** for JSON request bodies (such as POST/PUT with a body).</li>`<li>` Use **application/x-www-form-urlencoded** for token requests.</li>`<li>`Omit when there is no body (such as a simple GET).</li></ul>|
 
 
 ### Error responses
@@ -652,8 +652,8 @@ Authorization: Bearer `<access_token>`
 
 |Parameter      |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`id`            |Spotify ID of the album.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for an album. To get the Spotify ID of an album, from the Spotify Desktop Client, right-click on the album name. For example: **6rqhFgbbKwnb9MLmUQDhG6**|
-|`market`        |[ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)|string|optional |Note: <ul><li>If a country code is specified, only content that is available in that market will be returned.</li><li>If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.</li><li>If neither market or user country are provided, the content is considered unavailable for the client.</li></ul>|
+|`id`            |Spotify ID of the album.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for an album. <br />To get the Spotify ID of an album, from the Spotify Desktop Client, right-click on the album name. <br />For example: **6rqhFgbbKwnb9MLmUQDhG6**|
+|`market`        |[ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)|string|optional |Note: `<ul>``<li>`If a country code is specified, only content that is available in that market will be returned.</li>`<li>`If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.</li>`<li>`If neither market or user country are provided, the content is considered unavailable for the client.</li></ul>|
 
 #### Request example
 
@@ -849,7 +849,7 @@ Authorization: Bearer `<access_token>`
 
 |Element        |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`ids`            |JSON array of Spotify IDs. |array of strings| optional  |A maximum of 50 items can be specified in one request. Example: "**4iV5W9uYEdYUVa79Axb7Rh**", "**1301WleyT98MSxVHPZCA6M**". If the `ids` parameter is present in the query string, any IDs listed in the body are ignored. |
+|`ids`            |JSON array of Spotify IDs. |array of strings| optional  |A maximum of 50 items can be specified in one request. <br />Example: "**4iV5W9uYEdYUVa79Axb7Rh**", "**1301WleyT98MSxVHPZCA6M**". <br />If the `ids` parameter is present in the query string, any IDs listed in the body are ignored. |
 
 
 #### Request example
@@ -899,13 +899,13 @@ Authorization: Bearer `<access_token>`
 
 |Parameter      |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`ids`            |Comma-separated list of the Spotify IDs for albums.|string|required |Maximum number of IDs: 20. Example:`ids`= **382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc** |
+|`ids`            |Comma-separated list of the Spotify IDs for albums.|string|required |Maximum number of IDs: 20. <br />Example:`ids`= **382ObEPsp2rxGrnsizN5TX,1A2GTWGtFfWp7KSQTwWOyo,2noRn2Aes5aoNVsU6iWThc** |
 
 #### DELETE body
 
 |Element        |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`ids`            |JSON array of Spotify IDs. |array of strings| optional  |A maximum of 50 items can be specified in one request. Example: "**4iV5W9uYEdYUVa79Axb7Rh**", "**1301WleyT98MSxVHPZCA6M**". If the `ids` parameter is present in the query string, any IDs listed in the body are ignored. |
+|`ids`            |JSON array of Spotify IDs. |array of strings| optional  |A maximum of 50 items can be specified in one request. <br />Example: "**4iV5W9uYEdYUVa79Axb7Rh**", "**1301WleyT98MSxVHPZCA6M**". <br />If the `ids` parameter is present in the query string, any IDs listed in the body are ignored. |
 
 
 #### Request example
@@ -962,7 +962,7 @@ Authorization: Bearer `<access_token>`
 
 |Parameter      |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`ids`          |Comma-separated list of Spotify artist IDs.|string|required |Maximum number of IDs: 50. Example: `ids`= **2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6**|
+|`ids`          |Comma-separated list of Spotify artist IDs.|string|required |Maximum number of IDs: 50. <br />Example: `ids`= **2CIMQHirSU0MQqyYHq0eOx,57dN52uHvrHOxijzpIgu3E,1vCWHaC5f2uS3yhpwWbIA6**|
 
 
 #### Request example
@@ -1021,7 +1021,7 @@ curl --request GET \
 |`artists.followers`             |Information about the followers of the artist.  | object  |    |
 |`artists.followers.href`        |Currently not supported in the Web API.         |string |This parameter is always set to **null**.
 |`artists.followers.total`       |Total number of followers.                      |integer  |
-|`artists.genres`                |List of the genres with which the artist is associated. | array of strings | If not yet classified, the array is empty. Example: **["Prog rock","Grunge"]** |
+|`artists.genres`                |List of the genres with which the artist is associated. | array of strings | If not yet classified, the array is empty. <br />Example: **["Prog rock","Grunge"]** |
 |`artists.href`                  |Link to the Web API endpoint that provides full details of the artist. | string |     |
 |`artists.id`                    |Spotify ID for the artist. | string|      |
 |`artists.images`                |Images of the artist in various sizes, widest first. | array of image objects |       |
@@ -1058,8 +1058,8 @@ Authorization: Bearer `<access_token>`
 
 |Parameter      |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`id`            |Spotify ID of the artist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for an artist. To get the Spotify ID of an artist, from the Spotify Desktop Client, right-click on the artist name. For example: **6rqhFgbbKwnb9MLmUQDhG6**|
-|`market`        |[ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)|string|optional |Note:<ul><li>If a country code is specified, only content that is available in that market will be returned.</li><li> If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.</li><li> If neither market or user country are provided, the content is considered unavailable for the client.</li></ul> Example: `market`= **ES**|
+|`id`            |Spotify ID of the artist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for an artist. <br />To get the Spotify ID of an artist, from the Spotify Desktop Client, right-click on the artist name. <br />For example: **6rqhFgbbKwnb9MLmUQDhG6**|
+|`market`        |[ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)|string|optional |Note:`<ul>``<li>`If a country code is specified, only content that is available in that market will be returned.</li>`<li>` If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.</li>`<li>` If neither market or user country are provided, the content is considered unavailable for the client.</li></ul> Example: `market`= **ES**|
 
 #### Request example
 
@@ -1387,8 +1387,8 @@ Authorization: Bearer `<access_token>`
 
 |Parameter      |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`playlist_id`            |Spotify ID of the playlist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for a playlist. To get the Spotify ID of a playlist, from the Spotify Desktop Client, right-click on the playlist name. For example: **6rqhFgbbKwnb9MLmUQDhG6**|
-|`market`        |[ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)|string|optional |Note:<ul><li>If a country code is specified, only content that is available in that market will be returned.</li><li>If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.</li><li> If neither market or user country are provided, the content is considered unavailable for the client.</li></ul>|
+|`playlist_id`            |Spotify ID of the playlist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for a playlist.<br /> To get the Spotify ID of a playlist, from the Spotify Desktop Client, right-click on the playlist name. <br />For example: **6rqhFgbbKwnb9MLmUQDhG6**|
+|`market`        |[ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)|string|optional |Note:`<ul>``<li>`If a country code is specified, only content that is available in that market will be returned.</li>`<li>` If a valid user access token is specified in the request header, the country associated with the user account will take priority over this parameter.</li>`<li>` If neither market or user country are provided, the content is considered unavailable for the client.</li></ul>|
 
 
 #### Request example
@@ -1609,17 +1609,17 @@ Content-Type: application/json
 
 |Parameter      |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`playlist_id`            |Spotify ID of the playlist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for a playlist. To get the Spotify ID of a playlist, from the Spotify Desktop Client, right-click on the playlist name. For example: **3cEYpjA9oz9GiPac4AsH4n**|
-|`uris`         | Comma-separated list of Spotify URIs to update, which can be track or episode URIs.|string| optional | Examples: `uris`= **spotify:track:4iV5W9uYEdYUVa79Axb7Rh**,**spotify:track:1301WleyT98MSxVHPZCA6M**,**spotify:episode:512ojhOuo1ktJprKbVcKyQ**. A maximum of 100 items can be updated in one request.|
+|`playlist_id`            |Spotify ID of the playlist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for a playlist. <br />To get the Spotify ID of a playlist, from the Spotify Desktop Client, right-click on the playlist name. <br />For example: **3cEYpjA9oz9GiPac4AsH4n**|
+|`uris`         | Comma-separated list of Spotify URIs to update, which can be track or episode URIs.|string| optional | Examples: `uris`= **spotify:track:4iV5W9uYEdYUVa79Axb7Rh**,**spotify:track:1301WleyT98MSxVHPZCA6M**,**spotify:episode:512ojhOuo1ktJprKbVcKyQ**. <br />A maximum of 100 items can be updated in one request.|
 
 #### PUT body
 
 |Element        |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`uris`        |Array of Spotify URIs (tracks or episodes).|array|Note:<ul><li>_required_ if used to _replace_ items.</li><li>_optional_ if used to _reorder_ items.</li></ul>|Max 100 items. Note:<ul><li>When you replace items, `uris` is used.</li><li>When you reorder items, `uris` is _not_ used. Instead, use `range_start`, `insert_before`, and `range_length`.</li><li> Provide as a query parameter or in the request body.</li></ul> |
+|`uris`        |Array of Spotify URIs (tracks or episodes).|array|Note:`<ul>``<li>`_required_ if used to _replace_ items.</li>`<li>`_optional_ if used to _reorder_ items.</li></ul>|Max 100 items. <br />Note:`<ul>``<li>`When you replace items, `uris` is used.</li>`<li>` When you reorder items, `uris` is _not_ used. Instead, use `range_start`, `insert_before`, and `range_length`.</li>`<li>` Provide as a query parameter or in the request body.</li></ul> |
 |`range_start` |Position of the first item to be reordered.     |integer|optional  |Use to reorder items. |
 |`insert_before` |Position where the items should be inserted.     |integer|optional |To reorder the items to the end of the playlist, set `insert_before` to the position after the last item.|
-|`range_length`        |Number of items to be reordered.    |integer|optional  | Range of items to be reordered begins from the `range_start` position, and includes the `range_length` subsequent items. Example: To move the items at index 9-10 to the start of the playlist:<ul><li>Set `range_start` to **9**.</li><li>Set `range_length` to **2**.</li></ul>|
+|`range_length`        |Number of items to be reordered.    |integer|optional  | Range of items to be reordered begins from the `range_start` position, and includes the `range_length` subsequent items. <br />Example: To move the items at index 9-10 to the start of the playlist:`<ul>``<li>`Set `range_start` to **9**.</li>`<li>`Set `range_length` to **2**.</li></ul>|
 |`snapshot_id`         |Snapshot ID of the playlist against which you want to make the changes.|string |optional|   |
 
 #### Request example
@@ -1689,16 +1689,16 @@ Content-Type: application/json
 
 |Parameter      |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`playlist_id`  |Spotify ID of the playlist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for a playlist. To get the Spotify ID of a playlist, from the Spotify Desktop Client, right-click on the playlist name. For example: **3cEYpjA9oz9GiPac4AsH4n**|
-|`position`               | Position to which to insert the items, based on a zero-based index.| integer |optional |Note:<ul><li>To insert items in the first position, enter: `position`=0.</li><li>To insert items in the third position, enter: `position`=3.</li><li>If omitted, items are appended to the playlist.</li><li>Items are added in the order in which they are listed in the query string or request body. </li></ul>
-|`uris`         | Comma-separated list of Spotify URIs to add, which can be track or episode URIs.|string| optional | Example: `uris`= **spotify:track:4iV5W9uYEdYUVa79Axb7Rh**,**spotify:track:1301WleyT98MSxVHPZCA6M**,**spotify:episode:512ojhOuo1ktJprKbVcKyQ**. Note:<ul><li>A maximum of 100 items can be added in one request.</li><li> When adding a large number of items, it is recommended to pass them in the request body. For example: `uris`=[**spotify%3Atrack%3A4iV5W9uYEdYUVa79Axb7Rh**,**spotify%3Atrack%3A1301WleyT98MSxVHPZCA6M**]</li></ul> |
+|`playlist_id`  |Spotify ID of the playlist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for a playlist. <br />To get the Spotify ID of a playlist, from the Spotify Desktop Client, right-click on the playlist name. <br />For example: **3cEYpjA9oz9GiPac4AsH4n**|
+|`position`               | Position to which to insert the items, based on a zero-based index.| integer |optional |Note:`<ul>``<li>`To insert items in the first position, enter: `position`=0.</li>`<li>` To insert items in the third position, enter: `position`=3.</li>`<li>` If omitted, items are appended to the playlist.</li>`<li>` Items are added in the order in which they are listed in the query string or request body. </li></ul>
+|`uris`         | Comma-separated list of Spotify URIs to add, which can be track or episode URIs.|string| optional | Example: `uris`= **spotify:track:4iV5W9uYEdYUVa79Axb7Rh**,**spotify:track:1301WleyT98MSxVHPZCA6M**,**spotify:episode:512ojhOuo1ktJprKbVcKyQ**. Note:`<ul>``<li>`A maximum of 100 items can be added in one request.</li>`<li>` When adding a large number of items, it is recommended to pass them in the request body. For example: `uris`=[**spotify%3Atrack%3A4iV5W9uYEdYUVa79Axb7Rh**,**spotify%3Atrack%3A1301WleyT98MSxVHPZCA6M**]</li></ul> |
 
 #### POST body
 
 |Element        |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
 |`uris`        |Array of Spotify URIs (tracks or episodes).|array|required|Provide as a query parameter or in the request body. Max 100 items.|
-|`position`    | Position to which to insert the items, based on a zero-based index.| integer |optional |Note:<ul><li>To insert items in the first position, enter: `position`=0.</li><li> To insert items in the third position, enter: `position`=3.</li><li>If omitted, items are appended to the playlist.</li><li>Items are added in the order in which they appear in the uris array. For example: `uris`: [**"spotify:track:4iV5W9uYEdYUVa79Axb7Rh","spotify:track:1301WleyT98MSxVHPZCA6M"**], `position`: **3**}</li></ul>
+|`position`    | Position to which to insert the items, based on a zero-based index.| integer |optional |Note:`<ul>``<li>`To insert items in the first position, enter: `position`=0.</li>`<li>` To insert items in the third position, enter: `position`=3.</li>`<li>` If omitted, items are appended to the playlist.</li>`<li>` Items are added in the order in which they appear in the uris array. For example: `uris`: [**"spotify:track:4iV5W9uYEdYUVa79Axb7Rh","spotify:track:1301WleyT98MSxVHPZCA6M"**], `position`: **3**}</li></ul>
 
 #### Request example
 
@@ -1772,7 +1772,7 @@ Content-Type: application/json
 
 |Parameter      |Description|Type  |Required|Notes|
 |:--------------|:----------|:-----|:-------|-----| 
-|`playlist_id`  |Spotify ID of the playlist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for a playlist. To get the Spotify ID of a playlist, from the Spotify Desktop Client, right-click on the playlist name. For example: **3cEYpjA9oz9GiPac4AsH4n**|
+|`playlist_id`  |Spotify ID of the playlist.    |string|required |The Spotify ID is the base-62 identifier found at the end of the Spotify URI for a playlist. <br />To get the Spotify ID of a playlist, from the Spotify Desktop Client, right-click on the playlist name. <br />For example: **3cEYpjA9oz9GiPac4AsH4n**|
 
 #### DELETE body
 

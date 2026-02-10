@@ -289,7 +289,7 @@ Where the query parameters are:
 
 - `lat`: Latitude coordinate of the location.
 - `lon`: Longitude coordinate of the location.
-- `appid`=`<YOUR_API_KEY>`: Your unique API key.
+- `appid=`<YOUR_API_KEY>`: Your unique API key.
 
 ### Step 4: Verify a successful response
 

@@ -1,0 +1,56 @@
+import Link from '@docusaurus/Link';
+import styles from './index.module.css';
+
+export const meta = {
+  title: 'Docs-as-Code Portfolio — Liz Marlowe',
+  description: 'Modern technical documentation portfolio built with Docusaurus',
+};
+
+<section className={styles.hero}>
+  <div className={styles.heroInner}>
+    <img src="/docs-as-code-portfolio-docusaurus/images/logo.svg" className={styles.heroLogo} alt="LM Logo" />
+
+    <h1 className={styles.title}>Docs Site Using Docusaurus</h1>
+    <p className={styles.subtitle}>Technical documentation site built using modern developer workflows.</p>
+
+    <div className={styles.buttons}>
+      <Link className="button button--primary button--lg" to="/docs/">
+        Explore the Documentation
+      </Link>
+
+      <Link className="button button--secondary button--lg" to="/blog">
+        Visit the Blog
+      </Link>
+    </div>
+  </div>
+</section>
+
+<section className={styles.section}>
+  <h2>Documentation Areas</h2>
+
+  <div className={styles.cardGrid}>
+    <div className={styles.card}>
+      <h3>User Guides</h3>
+      <p>Clear, accessible documentation that supports successful product use.</p>
+      <Link to="/docs/category/user-guides">View User Guides →</Link>
+    </div>
+
+    <div className={styles.card}>
+      <h3>API Guides</h3>
+      <p>Clear, structured documentation that helps developers integrate and extend applications effectively.</p>
+      <Link to="/docs/category/api-guides/">Explore API Docs →</Link>
+    </div>
+
+    <div className={styles.card}>
+      <h3>How‑To Articles</h3>
+      <p>Clear, task‑based instructions that guide users through completing a specific workflow.</p>
+      <Link to="/docs/category/how-to-articles/">Read How-To Articles →</Link>
+    </div>
+
+    <div className={styles.card}>
+      <h3>Technical Reference</h3>
+      <p>Clear, detailed documentation for complex systems, including integrations, data flows, and platform‑level release updates.</p>
+      <Link to="/docs/category/technical-reference-guides/">Delve into Technical Reference Guides →</Link>
+    </div>
+  </div>
+</section>
