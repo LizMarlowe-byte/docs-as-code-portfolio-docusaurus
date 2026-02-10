@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocs_as_code_portfolio_docusaurus=globalThis.webpackChunkdocs_as_code_portfolio_docusaurus||[]).push([[1903],{9531(o){o.exports=JSON.parse('{"blogBasePath":"/docs-as-code-portfolio-docusaurus/blog","blogTitle":"Blog","authorsListPath":"/docs-as-code-portfolio-docusaurus/blog/authors"}')}}]);

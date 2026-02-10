@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkdocs_as_code_portfolio_docusaurus=globalThis.webpackChunkdocs_as_code_portfolio_docusaurus||[]).push([[2877],{1830(o){o.exports=JSON.parse('{"metadata":{"permalink":"/docs-as-code-portfolio-docusaurus/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
