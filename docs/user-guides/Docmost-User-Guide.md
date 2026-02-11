@@ -1,19 +1,24 @@
 # Docmost User Guide
 
-!!! abstract ""
+:::info About this guide
     This guide introduces _Docmost_, a collaborative wiki platform for teams and organizations. It walks you through common tasks, logical workflows, and essential features to help you create, collaborate, and manage content with confidence.
-
+:::
 ---
 
 ## 🧭 Introduction to Docmost
 
 _Docmost_ is an open-source collaborative wiki that provides easy and robust content creation and real-time collaboration.
 
-??? note "Topics"
+
+<details>
+<summary><strong>Topics</strong></summary>
+
     * [Overview](#overview)
     * [Workspaces, spaces, and pages](#workspaces-spaces-and-pages)
     * [Key features](#key-features)
     * [Target audience](#target-audience)
+	
+</details>
 
 ### Overview
 
@@ -79,16 +84,21 @@ This guide is intended for users who want to create and share content in a wiki 
 
 Set up your account for the cloud-hosted version of Docmost. Then, set up your profile and preferences.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Set up your account](#set-up-your-account)
 	* [Set your profile settings and preferences](#set-your-profile-settings-and-preferences)
 	
+</details>
 	
 ### Set up your account
 
 Set up your account for Docmost, which provides you with web-based, thin client access through your browser. 
 
-> **Note:** To install the enterprise version of Docmost, refer to the [Docmost enterprise installation instructions](https://docmost.com/docs/installation/).
+:::note Installation Requirement
+To install the enterprise version of Docmost, refer to the [Docmost enterprise installation instructions](https://docmost.com/docs/installation/).
+:::
 
 **Procedure**
 
@@ -171,12 +181,16 @@ After setting up your Docmost account, define your profile settings and preferen
 
 Create and customize your _**workspace**_, which is the top-level entity for organizing your content, user roles, and permissions.  After creating your workspace, invite others to collaborate within it.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Define workspace settings](#define-workspace-settings)
 	* [Invite members to a workspace](#invite-members-to-a-workspace)
 	* [Resend invitation to a member](#resend-invitation-to-a-member)
 	* [Revoke invitation to a member](#revoke-invitation-to-a-member)
 	* [Delete a member from a workspace](#delete-a-member-from-a-workspace)
+	
+</details>
 
 ### Define workspace settings
 
@@ -230,7 +244,9 @@ Invite people to collaborate in your workspace. Assign the invited members to ei
 
 ---
 
-> 💡 **Tip:** Alternatively, from the left pane, under **Settings** and **Workspace**, select **Members**.
+:::tip
+Alternatively, from the left pane, under **Settings** and **Workspace**, select **Members**.
+:::
 
 2. On the **Members** page, select **Invite members**.
 
@@ -248,7 +264,9 @@ Invite people to collaborate in your workspace. Assign the invited members to ei
 |Select role    |Select one of the following roles for all selected users:<ul><li>**Admin**: Can invite and delete members, edit workspace settings, manage spaces and users within the workspace, and assign roles to all members. The Admin role _cannot_ delete the workspace.</li><li>**Member**: Has access to assigned spaces and can contribute content based on specific permissions.</li></ul>|
 |Add to groups |Enter the groups for which you want the invited members to have access. (If you have _not_ created any groups yet, leave this field blank. You can add members to groups at a later time.)
 
-> 💡 **Tip:** If you want to assign different roles to different members, send one invitation for members for whom you want to assign the _same_ role. Then, send a _different_ invitation for members for whom you want to assign a _different_ role.
+:::tip
+If you want to assign different roles to different members, send one invitation for members for whom you want to assign the _same_ role. Then, send a _different_ invitation for members for whom you want to assign a _different_ role.
+:::
 
 4. Select **Send invitation**.
 
@@ -357,13 +375,17 @@ You can delete a member from a workspace.
 
 Create **_spaces_**, which are dedicated, organized areas within your workspace that group together documents, permissions, and collaborators by project, team, or purpose. You can add members to spaces and manage their permissions. You can also export spaces for backup, migration, or offline use.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Create a space](#create-a-space)
 	* [Edit space settings](#edit-space-settings)
 	* [Add members to a space](#add-members-to-a-space)
 	* [Remove a member from a space](#remove-a-member-from-a-space)
 	* [Export a space](#export-a-space)
 	* [Delete a space](#delete-a-space)
+
+</details>
 
 ### Create a space
 
@@ -440,8 +462,9 @@ After creating a space, you can edit a space's settings.
 
 Add individual members to a space for collaboration. Set specific permission levels for each member.
 
-> 💡 **Tip:** If you want to add multiple users to a space simultaneously, [create a group](#create-a-group) and then [add the entire group as a space member](#grant-group-access-to-a-space).
-
+:::tip
+If you want to add multiple users to a space simultaneously, [create a group](#create-a-group) and then [add the entire group as a space member](#grant-group-access-to-a-space).
+:::
 
 **Procedure**
 
@@ -478,8 +501,9 @@ Add individual members to a space for collaboration. Set specific permission lev
 
    The system adds the selected users as members to the space with the defined role. 
 
-> 💡 **Tip:** If you want to assign different roles to different members, complete these steps for members for whom you want to assign the _same_ role. Then, repeat these steps for members for whom you want to assign a _different_ role. 
-
+:::tip
+If you want to assign different roles to different members, complete these steps for members for whom you want to assign the _same_ role. Then, repeat these steps for members for whom you want to assign a _different_ role. 
+:::
 
 ### Remove a member from a space
 
@@ -565,7 +589,9 @@ You can export a space in both Markdown and HTML formats for backup, migration, 
 
 If you no longer need a space, you can delete it. For example, you created a space for a small group of members and they have merged into a bigger group that belongs to a different space.
 
-:warning: **Deleting a space permanently removes all pages, comments, attachments and permissions associated with the space. You _cannot_ undo this action.**
+:::warning
+Deleting a space permanently removes all pages, comments, attachments and permissions associated with the space. You _cannot_ undo this action.
+:::
 
 **Procedure**
 
@@ -601,16 +627,21 @@ Create **_groups_**, which allow you to manage user permissions for multiple use
 
 All users are assigned to a default group called **Everyone**.
 
-> [!NOTE]
-> Only users with **Admin** or **Owner** roles can create, edit, and delete groups.
+:::info
+Only users with **Admin** or **Owner** roles can create, edit, and delete groups.
+:::
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Create a group](#create-a-group)
 	* [Edit group settings](#edit-group-settings)
 	* [Grant group access to a space](#grant-group-access-to-a-space)
 	* [Add a member to a group](#add-a-member-to-a-group)
 	* [Remove a member from a group](#remove-a-member-from-a-group)
 	* [Delete a group](#delete-a-group)
+	
+</details>
 
 ### Create a group
 
@@ -715,8 +746,9 @@ Instead of adding _individual_ members to a space, you can add _groups_. Assign 
 
 ---
 
->[!NOTE]
-> If a user has been added as an individual member _and_ as a group member to the _same_ space with _different_ permission levels, the highest permission level applies. For example,  Alex Smith has been added as a member to the space, **Research & Development**, with **Can View** permissions. Alex has also been added to the group, **Core Engineering Team**, which has **Can Edit** permissions to this space. Therefore, Alex has edit privileges for this space. 
+:::info
+If a user has been added as an individual member _and_ as a group member to the _same_ space with _different_ permission levels, the highest permission level applies. For example,  Alex Smith has been added as a member to the space, **Research & Development**, with **Can View** permissions. Alex has also been added to the group, **Core Engineering Team**, which has **Can Edit** permissions to this space. Therefore, Alex has edit privileges for this space. 
+:::
 
 ### Add a member to a group
 
@@ -801,13 +833,17 @@ If needed, you can delete a group.
 
 Within a space, create and manage individual documents, or **_pages_**, which contain the content itself. Each page contains specific content for the space, such as a department's budget, project roadmap, or annual goals.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Create a page](#create-a-page)
 	* [Move a page to a different space](#move-a-page-to-a-different-space)
 	* [Copy a page to a different space](#copy-a-page-to-a-different-space)
 	* [Duplicate a page to the same space](#duplicate-a-page-to-the-same-space)
 	* [Import a page](#import-a-page)
 	* [Export a page](#export-a-page)
+	
+</details>
 
 ### Create a page
 

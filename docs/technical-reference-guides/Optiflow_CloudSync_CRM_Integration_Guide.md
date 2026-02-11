@@ -1,19 +1,24 @@
 # Optiflow CloudSync CRM Integration Guide
 
-!!! abstract ""
+:::info About this guide
     This guide describes the system integration between the Optiflow system and the CloudSync CRM system.
-
+:::
 ---
 
 ## 🔗 Optiflow-CloudSync CRM integration 
 
 In the _Optiflow–CloudSync CRM_ integration, CloudSync supplies customer engagement, ticket data, and real-time visibility updates from the CloudSync CRM system to the Optiflow system.
 
-??? note "Topics"
+
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Overview](#overview)
 	* [Target audience](#target-audience)
 	* [Data retrieval flow](#data-retrieval-flow)
 	* [Customer onboarding](#customer-onboarding)
+	
+</details>
 
 ### Overview
 
@@ -30,7 +35,9 @@ Optiflow also requests updates for mapping purposes to ensure usernames, statuse
 
 This integration supports users of the **CloudSync Service Hub**, utilizing **Chat Sessions**, **Video Support**, and **Support Ticket** channels. The real-time monitoring feed leverages CloudSync’s Omnichannel presence to display active sessions in Optiflow dashboards.
 
-> The Optiflow–CloudSync CRM integration uses the available **CloudSync API suite** and does _not_ require installing any packages in your CloudSync environment. Some minor setup in CloudSync is required to provide authentication and populate the APIs with the required data.
+:::note
+The Optiflow–CloudSync CRM integration uses the available **CloudSync API suite** and does _not_ require installing any packages in your CloudSync environment. Some minor setup in CloudSync is required to provide authentication and populate the APIs with the required data.
+:::
 
 #### Integration feeds
 
@@ -97,7 +104,7 @@ The workflow includes the following steps:
 | 3    | Optiflow    | Deploy CloudSync CRM Adapter | Optiflow enables the adapter, and populates it with the required parameters to supply the data points required for the Optiflow tenant.    |
 
 
-## 🛠️ Customer CloudSync CRM setup
+## 🛠️ Customer CloudSync CRM setup {#customer-cloudsync-crm-setup}
 
 The customer administrator needs to set up the access flow from their CloudSync tenant to the Optiflow adapter.
 
@@ -138,7 +145,9 @@ Log on to the CloudSync tenant application as an administrator.
 
 4. From **Available Entities**, move the relevant CDC entities that are in scope for the integration to **Selected Entities**, which can include:<ul><li>**SupportTicket**</li><li>**ChatSession**</li><li>**VideoSession**</li><li>**UserPresence**</li></ul>
 
-> **Note:** Only select the entities that are included in the integration. For example, if chats are not included, do _not_ select **ChatSession**.
+:::note
+Only select the entities that are included in the integration. For example, if chats are not included, do _not_ select **ChatSession**.
+:::
 
 5. Select **Save**.
 

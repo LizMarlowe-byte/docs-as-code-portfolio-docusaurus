@@ -1,8 +1,8 @@
 # AuroraOps Platform 5.2.0 Release Notes
 
-!!! abstract ""
+:::info About this guide
     This document summarizes the new features, product enhancements, resolved issues, and known issues in **AuroraOps Platform 5.2.0**.
-
+:::
 ---
 
 ## <h2 id="auroraOps-5.2.0-overview">📄 AuroraOps 5.2.0 overview</h2> 

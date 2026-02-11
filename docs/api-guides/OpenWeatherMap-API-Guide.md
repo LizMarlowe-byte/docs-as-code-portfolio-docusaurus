@@ -1,18 +1,23 @@
 # OpenWeatherMap API Guide
 
-!!! abstract ""
+:::info About this guide
     This guide describes the _OpenWeatherMap API_, a comprehensive weather data service for developers. It covers essential concepts—API hosts, authentication, rate limits, and pagination—along with a practical onboarding tutorial and a curated reference organized by resource type.
-
+:::
 ---
 
 ## 🌤️ Overview
 
 The _OpenWeatherMap_ API is a weather data service that provides access to comprehensive data sourced from global and local models, satellites, radars, and weather stations. Developers can use the API to retrieve current weather conditions, hourly and daily forecasts, historical data, and bulk weather information for multiple locations worldwide.
 
-??? note "Topics"
+
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Common use cases](#common-use-cases)
     * [Technical details](#technical-details)
     * [Target audience](#target-audience)
+	
+</details>
 
 ### Common use cases
 
@@ -88,8 +93,9 @@ Each tier offers specific rate limits and monthly quotas for API calls:
 |Expert         |100,000 calls/minute    |3 billion calls  |
 |Enterprise     |200,000 calls/minute    |5 billion calls  |
 
-> _**Note:** These values are intentionally normalized for portfolio demonstration and do _not_ reflect current OpenWeatherMap pricing tiers.
-
+:::note
+These values are intentionally normalized for portfolio demonstration and do _not_ reflect current OpenWeatherMap pricing tiers.
+:::
 
 ### Handling 429 errors (Too Many Requests)
 
@@ -139,16 +145,24 @@ For example, the following API request returns 24 hourly forecast entries for Lo
 GET https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=51.5085&lon=-0.1257&cnt=24&appid=YOUR_API_KEY
 
 ```
-> **Note:** `cnt` only limits the number of results. It does _not_ provide true pagination (such as page numbers or offsets). To retrieve additional data, you must send separate requests with different parameters.
+
+:::note
+`cnt` only limits the number of results. It does _not_ provide true pagination (such as page numbers or offsets). To retrieve additional data, you must send separate requests with different parameters.
+:::
+
 ---
 
-## 🚀 Getting started
+## 🚀 Getting started {#getting-started}
 
 Create an account, which generates your API key. You can create additional API keys on your account page, and edit, delete, or deactivate your keys.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Create an account](#create-an-account)
 	* [Create more API keys](#create-more-api-keys)
+	
+</details>
 
 ### Create an account
 
@@ -176,8 +190,9 @@ To get started using the OpenWeatherMap API, create an account. Once your accoun
 
 ---
 
-> **Note:** Always make sure to use your API key in every API call.
-
+:::note
+Always make sure to use your API key in every API call.
+:::
 
 ### Create more API keys
 
@@ -203,7 +218,9 @@ When you created your account, the OpenWeatherMap API generated a default API ke
 
 This tutorial describes how to retrieve the current weather for a specific city. It involves using your API key and testing it with curl (Client URL) to verify that the OpenWeatherMap API returns a valid response.
 
-> **Note:** Curl is a command-line tool used to transfer data to or from a server using various protocols - most commonly **HTTP** and **HTTPS**.
+:::info
+Curl is a command-line tool used to transfer data to or from a server using various protocols - most commonly **HTTP** and **HTTPS**.
+:::
 
 ### Before you begin
 
@@ -271,7 +288,9 @@ The API response will be similar to the following:
 ```
 Based on this response, the geographic coordinates for London, England are: `lat`:**51.5156177** and `lon`:**-0.0919983**.
 
-> **Note:** This sample shows a subset of the full response. The actual response includes additional objects for the specified range.
+:::note
+This sample shows a subset of the full response. The actual response includes additional objects for the specified range.
+:::
 
 ### Step 3: Retrieve current weather data for London, England
 
@@ -319,9 +338,11 @@ If you get a similar response, you're all set up with the OpenWeatherMap API.
 
 ---
 
-> **Note:** For more information about the JSON objects in the API response, see [API Reference](#api-reference).
+:::info
+For more information about the JSON objects in the API response, see [API Reference](#api-reference).
+:::
 
-## 📘 API reference
+## 📘 API reference {#api-reference}
 
 The OpenWeatherMap API is designed to help developers integrate weather-based data into applications by providing clear examples, endpoint details, and request/response formats.
 
@@ -393,7 +414,7 @@ curl -X GET "https://api.openweathermap.org/data/2.5/weather?q=London&appid=`<YO
 
 ```
 
-### Current and forecast weather data 🌤 
+### Current and forecast weather data 🌤 {#current-and-forecast-weather-data}
 
 Endpoints related to retrieving current and forecast weather data. You can retrieve hourly and daily forecast data.
 
@@ -758,7 +779,9 @@ https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=44.34&lon=10.99&appi
 
 Retrieves daily forecast data for any location on the globe. You can retrieve weather forecast data for up to 16 days in advance. Response data is available in JSON or XML formats.
 
-> _**Note:** This endpoint is deprecated in the real API. It is included here for portfolio purposes _only_. Prefer One Call API v3 (**/data/3.0/onecall**) for daily forecasts. 
+:::note
+This endpoint is deprecated in the real API. It is included here for portfolio purposes _only_. Prefer One Call API v3 (**/data/3.0/onecall**) for daily forecasts. 
+:::
 
 #### Method
 
@@ -954,7 +977,7 @@ https://api.openweathermap.org/data/2.5/forecast/daily?lat=44.34&lon=10.99&appid
 |`list.snow`|Forecasted snowfall for the day.                                       |number| Unit: **mm**.|
 |`list.pop`| Probability of precipitation on the specified day.                       |number| Valid values are between **0** and **1**, where **0**=0%, and **1**=100%. For example, a value of **0.5** would be a 50% chance of precipitation for the specified day.
 
-### Historical weather data 🕰 
+### Historical weather data 🕰 {#historical-weather-data}
 
 Endpoints related to retrieving historical weather data. You can retrieve hourly historical weather data for any location on the globe, and download this data in JSON or CSV formats. In addition, you can retrieve aggregated statistical data for the current year. Lastly, you can retrieve accumulated temperature and precipitation data for a specific time period in the past.
 
@@ -1093,7 +1116,9 @@ Using this endpoint, you can request basic statistical data for the following we
 
 All statistical weather data can only be obtained in JSON format. The frequency of the data update is 1 hour.
 
-> **Note:** This endpoint does _not_ return real historical data. It returns statistically calculated data based on real historical data for a specific period of time.
+:::note
+This endpoint does _not_ return real historical data. It returns statistically calculated data based on real historical data for a specific period of time.
+:::
 
 #### Method
 
@@ -1310,7 +1335,9 @@ https://history.openweathermap.org/data/2.5/history/accumulated_temperature?lat=
 }
                                                    
 ```     
-> **Note:** This sample shows a subset of the full response. The actual response includes additional objects for the specified range.        
+:::note
+This sample shows a subset of the full response. The actual response includes additional objects for the specified range.        
+:::
 
 #### Response elements
 
@@ -1367,7 +1394,9 @@ https://history.openweathermap.org/data/2.5/history/accumulated_precipitation?la
 }
                                                    
 ```    
-> **Note:** This sample shows a subset of the full response. The actual response includes additional objects for the specified range.        
+:::note
+This sample shows a subset of the full response. The actual response includes additional objects for the specified range.        
+:::
 
 #### Response elements
 
@@ -1377,9 +1406,11 @@ https://history.openweathermap.org/data/2.5/history/accumulated_precipitation?la
 |`rain`         |Accumulated precipitation for the date.                      |number  |Unit: **mm**.|
 |`count`        |Number of data measurements used in the accumulation of this data.                        |integer|               |
 
-> The `threshold` parameter is _not_ used. The whole amount of precipitation data is provided for a specific period.
+:::note
+The `threshold` parameter is _not_ used. The whole amount of precipitation data is provided for a specific period.
+:::
 
-### Bulk download of weather data 📦 
+### Bulk download of weather data 📦 {#bulk-download-of-weather-data}
 
 Endpoints related to retrieving and downloading up-to-date current, forecasted, and 7-day historical weather data for numerous cities and zip code areas in Europe, England, and the United States in JSON or CSV file formats.
 
@@ -1446,7 +1477,9 @@ where **`{BULK_FILE_NAME}`** is one of the following five files that contains cu
 
 2. Unpack the downloaded file by using any suitable archiver software. You will then have a JSON or CSV formatted file that is ready to use.
 
-> **Note:** All bulk files are available in both JSON and CSV formats. Filenames in the above table are relevant for JSON format. To download files in CSV format, change **json** to **csv** in the filename. For example, the **JSON** filename is **weather_16.json.gz**, and the **CSV** filename for the same data is **weather_16.csv.gz**.
+:::info
+All bulk files are available in both JSON and CSV formats. Filenames in the above table are relevant for JSON format. To download files in CSV format, change **json** to **csv** in the filename. For example, the **JSON** filename is **weather_16.json.gz**, and the **CSV** filename for the same data is **weather_16.csv.gz**.
+:::
 
 3. To download updated weather data, repeat steps #1-2 at the times indicated in the column, **Updated by UTC Time**, by the table in step #1. 
    Weather data is updated in these files on a regular basis.
@@ -1508,7 +1541,9 @@ where **`{BULK_FILE_NAME}`** is one of the following five files that contains fo
 
 2. Unpack the downloaded file by using any suitable archiver software. You will then have a JSON or CSV formatted file that is ready to use.
 
-> **Note:** All bulk files are available in both JSON and CSV formats. Filenames in the above table are relevant for JSON format. To download files in CSV format, change **json** to **csv** in the filename. For example, the **JSON** filename is **hourly1h_14.json.gz**, and the **CSV** filename for the same data is **hourly1h_14.csv.gz**.
+:::note
+All bulk files are available in both JSON and CSV formats. Filenames in the above table are relevant for JSON format. To download files in CSV format, change **json** to **csv** in the filename. For example, the **JSON** filename is **hourly1h_14.json.gz**, and the **CSV** filename for the same data is **hourly1h_14.csv.gz**.
+:::
 
 3. To download updated weather data, repeat steps #1-2 at the times indicated in the column, **Updated by UTC Time**, in the table in step #1. 
    Weather data is updated in these files on a regular basis.
@@ -1563,7 +1598,9 @@ where **`{BULK_FILE_NAME}`** is one of the files that contains a [7-day archive]
 
 2. Unpack the downloaded file by using any suitable archiver software. You will then have a JSON or CSV formatted file that is ready to use.
 
-> **Note:** All bulk files are available in both JSON and CSV formats. Filenames in the above table are relevant for JSON format. To download files in CSV format, change **json** to **csv** in the filename. For example, the **JSON** filename is **hourly1h_zip_eu_011025_2015.json.gz**, and the **CSV** filename for the same data is **hourly1h_zip_eu_011025_2015.csv.gz**.
+:::note
+All bulk files are available in both JSON and CSV formats. Filenames in the above table are relevant for JSON format. To download files in CSV format, change **json** to **csv** in the filename. For example, the **JSON** filename is **hourly1h_zip_eu_011025_2015.json.gz**, and the **CSV** filename for the same data is **hourly1h_zip_eu_011025_2015.csv.gz**.
+:::
 
 3. To download updated weather data, repeat steps #1-2 at the times indicated in the column, **Available data per day, UTC time**, in the table on the page, [7-day archive of current and forecast weather bulks files](https://openweathermap.org/bulk#bulk_archive). Weather data is updated in these files on a regular basis.
 

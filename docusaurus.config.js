@@ -13,6 +13,7 @@ const config = {
   // ✅ GitHub Pages (project site) values
   url: 'https://lizmarlowe-byte.github.io',
   baseUrl: '/docs-as-code-portfolio-docusaurus/',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   future: { v4: true },
@@ -53,14 +54,22 @@ const config = {
       // Social card; you can replace this later with your own under /static/images/
       image: 'img/docusaurus-social-card.jpg',
 
-      // (Optional) lock to light mode only — uncomment if you want this behavior
-      // colorMode: {
-      //   defaultMode: 'light',
-      //   disableSwitch: true,
-      //   respectPrefersColorScheme: false,
-      // },
-
+      // Current behavior: respect system preference
       colorMode: { respectPrefersColorScheme: true },
+
+      // Global docs UI tweaks (sidebar behavior)
+      docs: {
+        sidebar: {
+          hideable: true,               // Adds a toggle to collapse the entire sidebar
+          autoCollapseCategories: true, // Only one category expanded at a time
+        },
+      },
+
+      // Optional: Tweak right-hand Table of Contents site-wide
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 3,
+      },
 
       navbar: {
         // Rename if you like (e.g., 'Liz Marlowe Docs')
@@ -71,7 +80,6 @@ const config = {
           src: 'images/logo.svg',
         },
         items: [
-          // Replaces the old "Tutorial" docSidebar item
           // Keep this simple Docs link if you want a top nav route to /docs/
           { to: '/docs/', label: 'About this Site', position: 'left' },
 
@@ -84,6 +92,7 @@ const config = {
         ],
       },
 
+      // ✅ Footer is inside themeConfig
       footer: {
         style: 'dark',
         links: [
@@ -113,6 +122,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
 
+      // ✅ Prism is a sibling of footer (also inside themeConfig)
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,

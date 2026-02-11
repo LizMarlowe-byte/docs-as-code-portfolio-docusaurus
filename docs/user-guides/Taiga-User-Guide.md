@@ -1,19 +1,23 @@
 # Taiga User Guide
 
-!!! abstract ""
+:::info About this guide
     This guide introduces _Taiga_, an open-source project management platform built for Agile teams. It provides clear workflows and step-by-step instructions for essential tasks—creating projects, managing backlogs and sprints, collaborating with teammates, and working efficiently within Agile processes.
-
+:::
 ---
 
 ## 🧭 Introduction to Taiga 
 
 _Taiga_ is an open-source project management tool with an intuitive interface and comprehensive support for Agile methodologies, including Scrum and Kanban.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Overview](#overview)
 	* [Taiga deployment options](#taiga-deployment-options)
 	* [Key features](#key-features)
 	* [Target audience](#target-audience)
+
+</details>
 
 ### Overview
 
@@ -60,8 +64,9 @@ There are two main types of deployment options:
 
 ---
 
-> **Note:** For updated pricing information for all deployment options, see [Taiga's website](https://taiga.io/ "Taiga's website").
-
+:::note Updated Pricing Info
+For updated pricing information for all deployment options, see [Taiga's website](https://taiga.io/ "Taiga's website").
+:::
 
 ### Key features
 
@@ -81,15 +86,21 @@ This guide is intended for project managers and team leads who manage work using
 
 Create your account for the Taiga Cloud Basic deployment option. Then, set up your first project in Taiga.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Create your account](#create-your-account)
 	* [Create a project](#create-a-project)
+	
+</details>
 
 ### Create your account
 
 Create your account using the Taiga Cloud Basic deployment option.
 
-> **Note:** For more information about other types of deployment options, see [Taiga deployment options](#taiga-deployment-options).
+:::info
+For more information about other types of deployment options, see [Taiga deployment options](#taiga-deployment-options).
+:::
 
 **Procedure**
 
@@ -156,7 +167,9 @@ You can create a Scrum or Kanban project. You can also copy an existing project 
 
 3. If you selected **Scrum**, **Kanban**, or **Duplicate Project**, enter your project details.
 
-> **Note:** If you selected **Duplicate Project**, select the project you want to duplicate, and then enter your project details. If you selected **Import Project**, select the platform of the project you want to import and browse and select the project to import.
+:::note
+If you selected **Duplicate Project**, select the project you want to duplicate, and then enter your project details. If you selected **Import Project**, select the platform of the project you want to import and browse and select the project to import.
+:::
 
 ---
 
@@ -181,21 +194,26 @@ You can create a Scrum or Kanban project. You can also copy an existing project 
 
 ---
 
-> 💡 **Tip:** Before creating your user stories, you might find it useful to define your project settings, including adding team members to your project, customizing specific Agile entities (such as custom fields and adding new story points), and defining project modules and roles. If that is your preferred workflow, see [Defining project settings](#defining-project-settings).
+:::tip
+Before creating your user stories, you might find it useful to define your project settings, including adding team members to your project, customizing specific Agile entities (such as custom fields and adding new story points), and defining project modules and roles. If that is your preferred workflow, see [Defining project settings](#defining-project-settings).
+:::
 
-
-## ⚙️ Defining project settings
+## ⚙️ Defining project settings {#defining-project-settings}
 
 Define specific settings for your project, including updating project details, adding team members to the project, defining role permissions, and customizing specific Taiga attributes.
 
 > **Note:** For portfolio purposes, this section includes a curated list of tasks.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Update project details](#update-project-details)
 	* [Add new members](#add-new-members)
 	* [Define role permissions](#define-role-permissions)
 	* [Create a custom field](#create-a-custom-field)
 	* [Add a new issue type](#add-a-new-issue-type)
+	
+</details>
 
 ### Update project details
 
@@ -240,8 +258,9 @@ For field definitions shown during project creation (such as visibility and desc
 
    The application saves your updates.
 
-> **Note:** If needed, you can also delete the project from this screen.
-
+:::note
+If needed, you can also delete the project from this screen.
+:::
 
 ### Add new members
 
@@ -301,7 +320,9 @@ Add new members whom you want to contribute to your project. Typically, this inc
 
 ---
 
-> **Note:** If needed, you can delete members from this screen by selecting the **Delete member** icon.
+:::tip
+If needed, you can delete members from this screen by selecting the **Delete member** icon.
+:::
 
 ### Define role permissions
 
@@ -426,7 +447,7 @@ For example, you might want to add an issue type that is related to work that is
 
 ---
 
-## 🔄 Scrum project workflow 
+## 🔄 Scrum project workflow {#scrum-project-workflow}
 
 In Scrum, work typically moves through two main phases: 
 
@@ -451,14 +472,18 @@ The following table summarizes each step in the workflow.
 |5                 |**[Assign user stories to a sprint](#assign-user-stories-to-a-sprint)**   |Sprint Execution        |From the backlog, according to deployment priorities, related work, and development dependencies, determine which user stories should be assigned to upcoming sprints, and assign them accordingly.| For the sprint, _DLogix-S1_, assign the following user stories: _Change UI Labels_, _Create New Filters_, and _Enhance Search_. 
 |6                 |**[Track progress and complete user stories](#track-progress-and-complete-user-stories)**        |Sprint Execution        |During a sprint, track the status of user stories on a sprint taskboard. During the daily standups, discuss any blockers, issues, and dependencies, and try to resolve them so that members can complete the work defined in the relevant stories. At the end of a sprint, all stories should have a completed status. |One week into the _DLogix-S1_ sprint, the stories, _Change UI Labels_ and _Create New Filters_ are _In Progress_, and _Enhance Search_ has a dependency on another team that is currently being resolved.
 
-## 📋 Scrum backlog management
+## 📋 Scrum backlog management {#scrum-backlog-management}
 
 During backlog management, you prepare and prioritize work by creating the key entities you will use to manage work on a daily basis: _epics_, _user stories_, and _tasks_. Managing these entities and following the Scrum workflow helps you organize and prioritize work, with the goal of delivering value within the defined timebox.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Create an epic](#create-an-epic)
 	* [Create a user story](#create-a-user-story)
 	* [Create a task](#create-a-task)
+	
+</details>
 
 ### Create an epic
 
@@ -650,16 +675,20 @@ The system saves the new task.
 
 [Scrum sprint execution](#scrum-sprint-execution)
 
-##  🏃‍♂️ Scrum sprint execution
+##  🏃‍♂️ Scrum sprint execution {#scrum-sprint-execution}
 
 During sprint execution, you deliver the work that was prepared during backlog management. This phase includes planning sprints, assigning prioritized user stories to the sprint backlog, and coordinating daily progress. 
 
 Teams work collaboratively to complete stories within the sprint’s timebox, resolve blockers, and track progress using task boards or burndown charts. At the end of the sprint, completed work is reviewed and demonstrated, and the team reflects on improvements during the retrospective.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Create a sprint](#create-a-sprint)
 	* [Assign user stories to a sprint](#assign-user-stories-to-a-sprint)
 	* [Track progress and complete user stories](#track-progress-and-complete-user-stories)
+	
+</details>
 
 ### Create a sprint
 
@@ -767,7 +796,9 @@ During the daily standups, discuss any blockers, issues, and dependencies, and t
 
 --- 
 
-> 💡 **Tip:** Alternatively, from the left sidebar, select **Scrum > `{Sprint Name}`**. For example, select **Scrum > DataLogix-S1**.
+:::tip
+Alternatively, from the left sidebar, select **Scrum > `{Sprint Name}`**. For example, select **Scrum > DataLogix-S1**.
+:::
 
 2. View the Sprint Taskboard.
 
@@ -834,10 +865,14 @@ During the daily standups, discuss any blockers, issues, and dependencies, and t
 Beyond Scrum, Taiga supports other project management methodologies. In addition to organizing work into timeboxed sprints and managing tasks and user stories, you can configure Taiga to use a Kanban board for a higher-level view of project progress. Issues may be tracked independently of sprints, and the Team Board can be utilized for any type of project to display team member roles, skills, and contributions.
 
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Manage a Kanban board](#manage-a-kanban-board)
 	* [Manage issues](#manage-issues)
 	* [Manage the team board](#manage-the-team-board)
+	
+</details>
 
 
 ### Manage a Kanban board

@@ -1,8 +1,8 @@
 # Spotify Web API Guide
 
-!!! abstract ""
+:::info About this guide
     This guide describes the _Spotify Web API_, a powerful REST API that enables developers to access Spotify’s music catalog and user data. It covers conceptual overviews (OAuth flows, app access modes, rate limiting), a task‑based tutorial, and a curated API reference with realistic examples and parameter tables.
-
+:::
 ---
 
 ## 🎧 Overview
@@ -11,10 +11,14 @@ _Spotify_ is a leading digital audio streaming service that gives you access to 
 
 The _Spotify Web API_ is a RESTful API with different endpoints that return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalog. It allows developers to build applications that interact with Spotify's music data and features, allowing them to retrieve music information, manage playlists, control playback, and access user data through standard web requests (RESTful). It provides access to Spotify's catalog (including artists, albums, and tracks), and user features, using authorization flows like Client Credentials for app data and Authorization Code for user-specific actions.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Common use cases](#common-use-cases)
     * [Technical details](#technical-details)
     * [Target audience](#target-audience)
+	
+</details>
 
 ### Common use cases
 
@@ -227,7 +231,7 @@ To apply for this mode, your business or organization first needs to be an appro
 
 ---
 
-## ⚠️ HTTP status and error codes
+## ⚠️ HTTP status and error codes {#http-status-and-error-codes}
 
 Spotify's Web API follows standard HTTP status codes, paired with JSON responses. 
 
@@ -326,16 +330,20 @@ curl "https://api.spotify.com/v1/me/playlists?offset=20&limit=20" \
 
 ---
 
-## 🚀 Getting started
+## 🚀 Getting started {#getting-started}
 
 From the Spotify Developer Dashboard, set up your account. Then, create your first app, which provides you with a _client ID_ and _client secret_. Finally, request an _access token_, which is a string that contains the credentials and permissions you need to access a given resource. 
 
 Every access token is valid for 1 hour. Include the `Authorization` header in your API requests using: `Bearer (access token)`.
 
-??? note "Topics"
+<details>
+<summary><strong>Topics</strong></summary>
+
 	* [Set up your account](#set-up-your-account)
 	* [Create an app](#create-an-app)
 	* [Request an access token](#request-an-access-token)
+	
+</details>
 
 ### Set up your account
 
@@ -435,7 +443,9 @@ You can now request an _access token_, which is a string that contains the crede
    - For _macOS/Linux_, it is usually pre-installed. 
    - For _Windows_, [download and install curl](https://curl.se/windows/) or use Git Bash.
 
-> **Note:** Curl is a command-line tool used to transfer data to or from a server using various protocols - most commonly **HTTP** and **HTTPS**.
+:::info
+Curl is a command-line tool used to transfer data to or from a server using various protocols - most commonly **HTTP** and **HTTPS**.
+:::
 
 **Procedure**
 
@@ -498,7 +508,9 @@ To use the access token, you must include the `Authorization` header in your API
 
 This tutorial describes how to retrieve information about an artist. It involves appending the Spotify ID of the artist to the **Get Artist** endpoint, and including the access token using the `Authorization` header in the API request. 
 
-> **Note:** The request includes using curl (Client URL) for the HTTP request.
+:::info
+The request includes using curl (Client URL) for the HTTP request.
+:::
 
 ### Before you begin
 
@@ -617,7 +629,7 @@ For example:
 ```
 For more information, see [HTTP Status and Error Codes](#http-status-and-error-codes).
 
-### Albums 🎵
+### Albums 🎵 {#albums}
 
 Endpoints related to retrieving metadata for a single or multiple music albums, including tracks, artists, and availability by market.
 
@@ -929,7 +941,7 @@ curl --request DELETE \
 If successful (**200** status code), the specified albums have been removed from the library.
 
 
-### Artists 👤
+### Artists 👤 {#artists}
 
 Endpoints related to retrieving Spotify catalog information for a single or multiple artists by their unique Spotify IDs.
 
@@ -1186,7 +1198,7 @@ curl --request GET \
 |`tracks.artists`        | Artists who performed the track. |array of simplified artist objects |Each artist object includes a link in `href` to more detailed information about the artist.|
 
 <a id="player"></a>
-### Player ▶️
+### Player ▶️ {#player}
 
 Endpoints related to performing playback actions on a specific device.
 
@@ -1312,7 +1324,9 @@ If successful (**204** status code), playback on the device is paused.
 
 Skips to the next track in the user's queue. 
 
-> _**Note:** This API only works for users who have Spotify Premium. The order of execution is _not_ guaranteed when you use this API with other Player API endpoints.
+:::note
+This API only works for users who have Spotify Premium. The order of execution is _not_ guaranteed when you use this API with other Player API endpoints.
+:::
 
 #### Method
 
@@ -1351,7 +1365,7 @@ curl --request POST \
 If successful (**204** status code), the device skips to the next track in the queue.
 
 
-### Playlists 📂
+### Playlists 📂 {#playlists}
 
 Endpoints related to performing actions on a specific playlist owned by a Spotify user.
 

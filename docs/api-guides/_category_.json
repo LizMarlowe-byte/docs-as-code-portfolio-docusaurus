@@ -1,5 +1,7 @@
 {
   "label": "API Guides",
+  "collapsed": true,
+  "collapsible": true,
   "position": 2,
   "link": {
     "type": "generated-index",
