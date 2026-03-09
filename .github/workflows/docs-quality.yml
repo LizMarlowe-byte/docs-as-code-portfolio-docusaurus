@@ -1,0 +1,75 @@
+name: Docs Quality
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Lint, Spellcheck, Linkcheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ---------- Node-based tools: markdownlint-cli2, cspell ----------
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Node-based linters
+        run: |
+          npm --version
+          npm ci --ignore-scripts --no-audit --no-fund || true
+          # If package.json doesn't exist, just install the CLIs globally:
+          if [ ! -f package.json ]; then
+            npm init -y >/dev/null 2>&1
+            npm install --save-dev markdownlint-cli2@^0 cspell@^8
+          else
+            npm install --save-dev markdownlint-cli2@^0 cspell@^8
+          fi
+
+      - name: Run markdownlint
+        run: npx markdownlint-cli2 "**/*.md" "!**/node_modules/**" "!**/vendor/**" "!**/public/**" "!**/build/**" "!**/_site/**" "!**/site/**"
+
+      - name: Run cspell (spell check)
+        run: npx cspell lint "**/*.{md,mdx,yml,yaml,json,toml,txt}" --no-progress --show-context --unique --gitignore
+
+      # ---------- Link checking with lychee ----------
+      - name: Install lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # We'll call the CLI directly later; this step sets up a cached binary.
+          args: --version
+
+      - name: Run lychee (broken links)
+        run: |
+          # Generate a list of files to scan; skip build outputs
+          LYCHEE_OPTS="--accept 200,204,206 --max-redirects 10 --timeout 20 --retry-wait-time 2 --user-agent 'docs-ci' --verbose"
+          # Prefer a config file if present
+          if [ -f .lycheecfg.toml ] || [ -f lychee.toml ]; then
+            lychee $LYCHEE_OPTS --config .lycheecfg.toml --config lychee.toml || lychee $LYCHEE_OPTS
+          else
+            lychee $LYCHEE_OPTS "**/*.md" --exclude "localhost" --exclude "#"
+          fi
+
+      # ---------- Optional: Vale style checks if config present ----------
+      - name: Install Vale (optional)
+        if: hashFiles('vale.ini') != ''
+        run: |
+          curl -fsSL https://install.goreleaser.com/github.com/errata-ai/vale.sh | sh
+          sudo mv ./bin/vale /usr/local/bin/vale
+          vale --version
+
+      - name: Run Vale (style)
+        if: hashFiles('vale.ini') != ''
+        run: |
+          # Vale will pick up styles defined in .github/styles or styles/
+          vale .
