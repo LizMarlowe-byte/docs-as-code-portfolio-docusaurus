@@ -45,7 +45,7 @@ This page is the **documentation homepage** in Docusaurus. Because it’s `docs/
 
 ## 📚 Organized Documentation Examples
 
-- **User Guides** — [/docs/category/user-guides/](/docs/category/user-guides/)
-- **API Guides** — [/docs/category/api-guides/](/docs/category/api-guides/)
-- **How‑To Articles** — [/docs/category/how-to-articles/](/docs/category/how-to-articles/)
-- **Technical Reference Guides** — [/docs/category/technical-reference-guides/](/docs/category/technical-reference-guides/)
+- [User Guides](/docs/category/user-guides/)
+- [API Guides](/docs/category/api-guides/)
+- [How-To Articles](/docs/category/how-to-articles/)
+- [Technical Reference Guides](/docs/category/technical-reference-guides/)
