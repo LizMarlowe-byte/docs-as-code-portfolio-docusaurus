@@ -2,7 +2,7 @@
 
 This repo represents my work with Docusaurus and demonstrates how I approach modern documentation workflows—from information architecture and content strategy to build automation and publishing.
 
-## Purpose of this Project
+## 🎯 Purpose of This Project
 
 As a Sr. Technical Writer, I use git‑based workflows and developer‑centric tooling.
 
