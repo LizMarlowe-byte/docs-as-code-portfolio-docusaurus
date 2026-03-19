@@ -50,8 +50,7 @@ This portfolio series is my opportunity to:
 - NPM for dependency and build management
 
 **Source & CI:**  
-[Repository](https://github.com/LizMarlowe-byte/docs-as-code-portfolio-docusaurus)  
-[Actions](https://github.com/LizMarlowe-byte/docs-as-code-portfolio-docusaurus/actions)
+[Repository](https://github.com/LizMarlowe-byte/docs-as-code-portfolio-docusaurus) · [Actions](https://github.com/LizMarlowe-byte/docs-as-code-portfolio-docusaurus/actions)
 
 
 
