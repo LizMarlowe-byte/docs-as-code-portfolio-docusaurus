@@ -43,9 +43,9 @@ This page is the **documentation homepage** in Docusaurus. Because it’s `docs/
 - Local dev (`npm start`) and production build (`npm run build`)  
 - Deployable to GitHub Pages, Vercel, or Netlify
 
-### 📚 Organized Documentation Examples
+## 📚 Organized Documentation Examples
 
-- **User Guides** — ../category/user-guides/
-- **API Guides** — ../category/api-guides/
-- **How‑To Articles** — ../category/how-to-articles/
-- **Technical Reference Guides** — ../category/technical-reference-guides/
+- **User Guides** — [/docs/category/user-guides/](/docs/category/user-guides/)
+- **API Guides** — [/docs/category/api-guides/](/docs/category/api-guides/)
+- **How‑To Articles** — [/docs/category/how-to-articles/](/docs/category/how-to-articles/)
+- **Technical Reference Guides** — [/docs/category/technical-reference-guides/](/docs/category/technical-reference-guides/)
