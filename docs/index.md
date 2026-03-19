@@ -44,18 +44,8 @@ This page is the **documentation homepage** in Docusaurus. Because it’s `docs/
 - Deployable to GitHub Pages, Vercel, or Netlify
 
 ### 📚 Organized Documentation Examples
-- **User Guides** → ./user-guides/  
-- **API Guides** → ./api-guides/  
-- **How‑To Articles** → ./how-to-articles/  
-- **Technical Reference Guides** → ./technical-reference-guides/
 
----
-
-## 🚧 What’s Next: 4‑SSG Series Roadmap
-
-1. **MkDocs** — ✔️ Completed  
-2. **Hugo** — Work in progress  
-3. **Docusaurus** — ✔️ This site  
-4. **Jekyll** — Final project
-
-At the end of the series, I’ll publish a comparative write‑up covering setup, customization, plugin ecosystems, docs‑as‑code workflows, and best use cases.
+ **User Guides** — /docs/user-guides/
+- **API Guides** — /docs/api-guides/
+- **How‑To Articles** — /docs/how-to-articles/
+- **Technical Reference Guides** — /docs/technical-reference-guides/
