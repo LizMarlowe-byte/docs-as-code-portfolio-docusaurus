@@ -30,10 +30,11 @@ This portfolio series is my opportunity to:
 
 ### 📚 Organized Documentation Examples
 
-- **User Guides** — <./docs/user-guides/index.md>
-- **API Guides** — <./docs/api-guides/index.md>
-- **How‑To Articles** — <./docs/how-to-articles/index.md>
-- **Technical Reference Guides** — <./docs/technical-reference-guides/index.md>
+- [User Guides](docs/user-guides/index.md)
+- [API Guides](docs/api-guides/index.md)
+- [How‑To Articles](docs/how-to-articles/index.md)
+- [Technical Reference Guides](docs/technical-reference-guides/index.md)
+
 
 
 
