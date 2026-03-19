@@ -1,41 +1,17 @@
-# Website
+# Doc Site Using Docusaurus
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This repo represents my work with Docusaurus and demonstrates how I approach modern documentation workflows—from information architecture and content strategy to build automation and publishing.
 
-## Installation
+## Purpose of this Project
 
-```bash
-yarn
-```
+As a Sr. Technical Writer, I use git‑based workflows and developer‑centric tooling.
 
-## Local Development
+This portfolio series is my opportunity to:
 
-```bash
-yarn start
-```
+* Strengthen and demonstrate my docs‑as‑code skills
+* Explore and compare popular SSGs used in engineering teams
+* Showcase real examples of my technical writing
+* Build documentation sites end‑to‑end using best practices
+* Create a curated, public‑facing writing and tooling portfolio
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
