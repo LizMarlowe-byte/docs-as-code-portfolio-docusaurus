@@ -49,16 +49,19 @@ jobs:
           # We'll call the CLI directly later; this step sets up a cached binary.
           args: --version
 
-      - name: Run lychee (broken links)
-        run: |
-          # Generate a list of files to scan; skip build outputs
-          LYCHEE_OPTS="--accept 200,204,206 --max-redirects 10 --timeout 20 --retry-wait-time 2 --user-agent 'docs-ci' --verbose"
-          # Prefer a config file if present
-          if [ -f .lycheecfg.toml ] || [ -f lychee.toml ]; then
-            lychee $LYCHEE_OPTS --config .lycheecfg.toml --config lychee.toml || lychee $LYCHEE_OPTS
-          else
-            lychee $LYCHEE_OPTS "**/*.md" --exclude "localhost" --exclude "#"
-          fi
+     - name: Run lychee (broken links)
+   run: |
+    # Generate a list of files to scan; skip build outputs
+    LYCHEE_OPTS="--accept 200,204,206 --max-redirects 10 --timeout 20 --retry-wait-time 2 --user-agent 'docs-ci' --verbose"
+
+    # Ignore all internal docs links that Docusaurus generates at build time
+    EXCLUDES="--exclude '/docs/.*' --exclude 'localhost' --exclude '#'"
+
+    if [ -f .lycheecfg.toml ] || [ -f lychee.toml ]; then
+      lychee $LYCHEE_OPTS $EXCLUDES --config .lycheecfg.toml --config lychee.toml || lychee $LYCHEE_OPTS $EXCLUDES
+    else
+      lychee $LYCHEE_OPTS $EXCLUDES "**/*.md"
+    fi
 
       # ---------- Optional: Vale style checks if config present ----------
       - name: Install Vale (optional)
