@@ -47,5 +47,5 @@ This page is the **documentation homepage** in Docusaurus. Because it’s `docs/
 
 - [User Guides](/docs/category/user-guides/)
 - [API Guides](/docs/category/api-guides/)
-- [How-To Articles](/docs/category/how-to-articles/)
+- [How To Articles](/docs/category/how-to-articles/)
 - [Technical Reference Guides](/docs/category/technical-reference-guides/)
