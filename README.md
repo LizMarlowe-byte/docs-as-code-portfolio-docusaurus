@@ -1,5 +1,7 @@
 # Doc Site Using Docusaurus
 
+Welcome to the second project in my **Docs‑as‑Code Portfolio Series**, where I’m building and publishing documentation sites using four different static site generators (SSGs): **MkDocs**, **Hugo**, **Docusaurus**, and **Jekyll**.
+
 This repo represents my work with Docusaurus and demonstrates how I approach modern documentation workflows—from information architecture and content strategy to build automation and publishing.
 
 ## 🎯 Purpose of This Project
