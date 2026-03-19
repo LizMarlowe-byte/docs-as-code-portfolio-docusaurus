@@ -29,8 +29,10 @@ This portfolio series is my opportunity to:
 - Deployable to GitHub Pages, Vercel, or Netlify
 
 ### 📚 Organized Documentation Examples
-- **User Guides** → ./user-guides/  
-- **API Guides** → ./api-guides/  
-- **How‑To Articles** → ./how-to-articles/  
-- **Technical Reference Guides** → ./technical-reference-guides/
+
+- **[User Guides](/user-guides/)**  
+- **[API Guides](/api-guides/)**  
+- **[How‑To Articles](/how-to-articles/)**  
+- **[Technical Reference Guides](/technical-reference-guides/)**
+
 
